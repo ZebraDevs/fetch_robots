@@ -31,7 +31,9 @@
   </node>
 
   <!-- Drivers for Gripper -->
-  <node name="gripper_driver" pkg="fetch_drivers" type="gripper_driver" output="screen" />
+  <node name="gripper_driver" pkg="fetch_drivers" type="gripper_driver" output="screen" >
+    <param name="firmware_tar_gz" value="$(find fetch_drivers)/firmware.tar.gz" />
+  </node>
 
   <!-- Controllers -->
   <rosparam file="$(find fetch_bringup)/config/default_controllers.yaml" command="load" />
