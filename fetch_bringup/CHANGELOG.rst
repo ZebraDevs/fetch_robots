@@ -2,8 +2,8 @@
 Changelog for package fetch_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.5.3 (2015-05-03)
+------------------
 * use new laser safety feature of base controller
 * add firmware param for gripper
 * Contributors: Michael Ferguson
