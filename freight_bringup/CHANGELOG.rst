@@ -2,6 +2,11 @@
 Changelog for package freight_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* use new laser safety feature of base controller
+* Contributors: Michael Ferguson
+
 0.5.2 (2015-04-19)
 ------------------
 * hold position when stopped
