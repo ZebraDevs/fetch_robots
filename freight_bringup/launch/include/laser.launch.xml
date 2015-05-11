@@ -7,7 +7,12 @@
     <param name="frame_id" type="string" value="laser_link" />
     <param name="range_max" type="double" value="25.0" />
     <param name="time_increment" type="double" value="0.000061728" />
-    <remap from="scan" to="base_scan" />
+    <remap from="scan" to="base_scan_raw" />
+  </node>
+
+  <node name="sick_tim_filter" pkg="fetch_drivers" type="laser_filter">
+    <remap from="in" to="base_scan_raw" />
+    <remap from="out" to="base_scan" />
   </node>
 
 </launch>
