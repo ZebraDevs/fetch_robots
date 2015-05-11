@@ -5,7 +5,7 @@
 
   <!-- Odometry -->
   <param name="base_controller/publish_tf" value="false" />
-  <include file="$(find freight_bringup)/launch/graft.launch" />
+  <include file="$(find freight_bringup)/launch/include/graft.launch.xml" />
 
   <!-- URDF -->
   <param name="robot_description" textfile="$(find fetch_description)/robots/freight.urdf" />
@@ -26,17 +26,9 @@
   <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
 
   <!-- Laser -->
-  <node name="sick_tim551_2050001" pkg="sick_tim" type="sick_tim551_2050001" respawn="true" >
-    <param name="min_ang" type="double" value="-1.91986" />
-    <param name="max_ang" type="double" value="1.91986" />
-    <param name="hostname" type="string" value="10.42.42.10" />
-    <param name="frame_id" type="string" value="laser_link" />
-    <param name="range_max" type="double" value="25.0" />
-    <param name="time_increment" type="double" value="0.000061728" />
-    <remap from="scan" to="base_scan" />
-  </node>
+  <include file="$(find freight_bringup)/launch/include/laser.launch.xml" />
 
   <!-- Teleop -->
-  <include file="$(find freight_bringup)/launch/teleop.launch" />
+  <include file="$(find freight_bringup)/launch/include/teleop.launch.xml" />
 
 </launch>
