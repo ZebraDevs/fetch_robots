@@ -2,6 +2,11 @@
 Changelog for package freight_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* use no_delay parameter with graft
+* Contributors: Michael Ferguson
+
 0.5.4 (2015-05-10)
 ------------------
 * filter shadow points from laser
