@@ -2,8 +2,8 @@
 Changelog for package freight_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.5.5 (2015-05-21)
+------------------
 * use no_delay parameter with graft
 * Contributors: Michael Ferguson
 
