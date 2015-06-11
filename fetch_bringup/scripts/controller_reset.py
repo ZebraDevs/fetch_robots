@@ -31,6 +31,7 @@
 import rospy
 import actionlib
 from actionlib_msgs.msg import GoalStatus
+from control_msgs.msg import GripperCommandAction, GripperCommandGoal
 from sensor_msgs.msg import Joy
 from robot_controllers_msgs.msg import QueryControllerStatesAction, \
                                        QueryControllerStatesGoal, \
@@ -38,13 +39,17 @@ from robot_controllers_msgs.msg import QueryControllerStatesAction, \
 
 # Listen to joy messages, when button held, reset controllers
 class ControllerResetTeleop:
-    ACTION_NAME = "/query_controller_states"
+    CONTROLLER_ACTION_NAME = "/query_controller_states"
+    GRIPPER_ACTION_NAME = "/gripper_controller/gripper_action"
 
     def __init__(self):
-        rospy.loginfo("Connecting to %s..." % self.ACTION_NAME)
-        self.client = actionlib.SimpleActionClient(self.ACTION_NAME, QueryControllerStatesAction)
-        self.client.wait_for_server()
+        rospy.loginfo("Connecting to %s..." % self.CONTROLLER_ACTION_NAME)
+        self.controller_client = actionlib.SimpleActionClient(self.CONTROLLER_ACTION_NAME, QueryControllerStatesAction)
+        self.controller_client.wait_for_server()
         rospy.loginfo("Done.")
+
+        rospy.loginfo("Connecting to %s..." % self.GRIPPER_ACTION_NAME)
+        self.gripper_client = actionlib.SimpleActionClient(self.GRIPPER_ACTION_NAME, GripperCommandAction)
 
         self.start = list()
         self.start.append("arm_controller/gravity_compensation")
@@ -78,6 +83,7 @@ class ControllerResetTeleop:
             rospy.logwarn("reset_button is out of range")
 
     def reset(self):
+        # Reset controllers
         goal = QueryControllerStatesGoal()
     
         for controller in self.start:
@@ -92,7 +98,12 @@ class ControllerResetTeleop:
             state.state = state.STOPPED
             goal.updates.append(state)
 
-        self.client.send_goal(goal)
+        self.controller_client.send_goal(goal)
+
+        # Disable gripper torque
+        goal = GripperCommandGoal()
+        goal.command.max_effort = -1.0
+        self.gripper_client.send_goal(goal)
 
 if __name__ == "__main__":
     rospy.init_node("controller_reset")
