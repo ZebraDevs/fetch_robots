@@ -2,8 +2,8 @@
 Changelog for package fetch_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.6.0 (2015-06-23)
+------------------
 * start tuck_arm.py as joystick teleop
 * disable gripper when resetting controllers
 * Contributors: Michael Ferguson
