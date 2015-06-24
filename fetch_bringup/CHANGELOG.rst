@@ -2,6 +2,12 @@
 Changelog for package fetch_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* start tuck_arm.py as joystick teleop
+* disable gripper when resetting controllers
+* Contributors: Michael Ferguson
+
 0.5.5 (2015-05-21)
 ------------------
 * use no_delay parameter with graft
