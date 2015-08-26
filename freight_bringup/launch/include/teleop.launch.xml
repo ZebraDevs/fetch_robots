@@ -1,6 +1,8 @@
 <launch>
 
-  <node name="joy" pkg="joy" type="joy_node"/>
+  <node name="joy" pkg="joy" type="joy_node">
+  	<param name="autorepeat_rate" value="1"/>
+  </node>
 
   <node name="teleop" pkg="fetch_teleop" type="joystick_teleop" output="screen">
     <param name="is_fetch" value="false"/>
