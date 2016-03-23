@@ -2,8 +2,8 @@
 Changelog for package fetch_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.6.1 (2016-03-22)
+------------------
 * require latest sixad
 * Add autorepeat_rate parameter to teleop launch
 * Contributors: Michael Ferguson, Michael Hwang
