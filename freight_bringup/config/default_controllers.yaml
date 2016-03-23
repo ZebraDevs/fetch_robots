@@ -1,7 +1,7 @@
 base_controller:
   type: "robot_controllers/DiffDriveBaseController"
   max_velocity_x: 1.5
-  max_acceleration_x: 1.25
+  max_acceleration_x: 2.0
   # hold position
   moving_threshold: -0.01
   rotating_threshold: -0.01
