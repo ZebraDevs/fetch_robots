@@ -2,6 +2,13 @@
 Changelog for package freight_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* require latest sixad
+* Raised acceleration limits to 2.0
+* Add autorepeat_rate parameter to teleop launch
+* Contributors: Alex Henning, Michael Ferguson, Michael Hwang
+
 0.6.0 (2015-06-23)
 ------------------
 
