@@ -28,9 +28,6 @@
   <!-- Laser -->
   <include file="$(find freight_bringup)/launch/include/laser.launch.xml" />
 
-  <!-- PMD -->
-  <include file="$(find freight_bringup)/launch/include/base_camera_pmd.launch.xml" />
-
   <!-- Teleop -->
   <include file="$(find freight_bringup)/launch/include/teleop.launch.xml" />
 
