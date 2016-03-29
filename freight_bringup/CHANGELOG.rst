@@ -2,6 +2,12 @@
 Changelog for package freight_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* fix dependency issue with sixad
+* Added PMD to freight.launch
+* Contributors: Alex Henning, Michael Ferguson
+
 0.6.1 (2016-03-22)
 ------------------
 * require latest sixad
