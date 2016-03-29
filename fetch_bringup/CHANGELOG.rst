@@ -2,8 +2,8 @@
 Changelog for package fetch_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.7.0 (2016-03-28)
+------------------
 * fix dependency issue with sixad
 * Contributors: Michael Ferguson
 
