@@ -35,7 +35,7 @@
   <group ns="base_camera">
     <!-- Nodelet manager. -->
     <node pkg="nodelet" type="nodelet" name="$(arg nodelet_manager)" args="manager"
-          if="$(arg start_manager)" machine="$(arg machine)" output="screen"/>
+          if="$(arg start_manager)" machine="$(arg machine)" respawn="true" output="screen"/>
 
     <!-- pico_flexx_driver nodelet. -->
     <node pkg="nodelet" type="nodelet" name="$(arg base_name)_driver" machine="$(arg machine)"
