@@ -2,6 +2,11 @@
 Changelog for package fetch_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* update to use /dev/ps3joy
+* Contributors: Michael Ferguson
+
 0.7.0 (2016-03-28)
 ------------------
 * fix dependency issue with sixad
