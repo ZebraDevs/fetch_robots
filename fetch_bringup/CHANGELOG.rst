@@ -2,8 +2,8 @@
 Changelog for package fetch_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.7.1 (2016-05-05)
+------------------
 * update to use /dev/ps3joy
 * Contributors: Michael Ferguson
 
