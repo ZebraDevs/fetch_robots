@@ -2,8 +2,8 @@
 Changelog for package freight_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.7.2 (2016-06-14)
+------------------
 * add launch_camera argument
 * Contributors: Michael Ferguson
 
