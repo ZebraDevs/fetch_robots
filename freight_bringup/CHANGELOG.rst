@@ -2,6 +2,11 @@
 Changelog for package freight_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* add launch_camera argument
+* Contributors: Michael Ferguson
+
 0.7.1 (2016-05-05)
 ------------------
 * update to use /dev/ps3joy
