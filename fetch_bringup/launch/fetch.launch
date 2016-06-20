@@ -53,4 +53,9 @@
   <!-- Teleop -->
   <include file="$(find fetch_bringup)/launch/include/teleop.launch.xml" />
 
+  <!-- Software Runstop -->
+  <include file="$(find fetch_bringup)/launch/include/runstop.launch.xml">
+    <arg name="flags" value="-a -b -g" />
+  </include>
+
 </launch>
