@@ -1,0 +1,6 @@
+<launch>
+
+  <arg name="flags" default="-a -b -g"/>
+  <node name="software_runstop" pkg="fetch_bringup" type="software_runstop.py" args="$(arg flags)" />
+
+</launch>
