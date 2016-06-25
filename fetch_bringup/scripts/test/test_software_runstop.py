@@ -39,10 +39,17 @@ from software_runstop import SoftwareRunstop
 
 
 def stub_set_breaker(*args):
-    # For current tests, 
+    # For current tests, assume breaker was set successfully
     return True
 # Use stub to replace set_breaker()
 SoftwareRunstop.set_breaker = stub_set_breaker
+
+def stub_check_robot_components(self):
+    # Current tests of init don't test robot components configuration
+    self._has_arm = True
+    self._has_base = True
+# Use stub to replace _check_robot_components()
+SoftwareRunstop._check_robot_components = stub_check_robot_components
 
 
 class TestInit(unittest.TestCase):

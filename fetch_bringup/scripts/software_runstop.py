@@ -103,13 +103,15 @@ class SoftwareRunstop(object):
             raise ValueError("SoftwareRunstop invoked without any "
                     "breakers to be controlled.")
 
+        self._check_robot_components()
+
         self.desired_breaker_states = {}
-        if arm and rospy.get_param('robot_driver/has_arm'):
+        if arm and self._has_arm:
             self.desired_breaker_states["/arm_breaker"] = True
-        if base and rospy.get_param('robot_driver/has_base'):
+        if base and self._has_base:
             self.desired_breaker_states["/base_breaker"] = True
         # Gripper requiring arm is same assumption used in drivers
-        if gripper and rospy.get_param('robot_driver/has_arm'):
+        if gripper and self._has_arm:
             self.desired_breaker_states["/gripper_breaker"] = True
         self.tele = tele
 
@@ -123,6 +125,10 @@ class SoftwareRunstop(object):
         self.disable_breakers_tele = False
         self.disable_breakers_ext = False
 
+    def _check_robot_components(self):
+        """Check ROS params"""
+        self._has_arm = rospy.get_param('robot_driver/has_arm', False)
+        self._has_base = rospy.get_param('robot_driver/has_base', False)
 
     def setup_and_run(self):
         """Connect to topics and start running software runstop"""
