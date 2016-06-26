@@ -51,7 +51,5 @@
       <param name="queue_size"         type="int"    value="$(arg queue_size)"/>
       <param name="base_name_tf"       type="str"    value="$(arg base_name_tf)"/>
     </node>
-
-    <node pkg="nodelet" type="nodelet" name="pcl_manager" args="manager" output="screen" />
   </group>
 </launch>
