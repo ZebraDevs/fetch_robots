@@ -18,3 +18,8 @@ install(
   PROGRAMS scripts/controller_reset.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
+
+install(
+  PROGRAMS scripts/software_runstop.py
+  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+)
