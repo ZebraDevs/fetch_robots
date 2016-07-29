@@ -1,6 +1,7 @@
 <launch>
 
   <!-- Calibration -->
+  <param name="calibration_date" value="uncalibrated"/>
   <param name="base_controller/track_width" value="0.37476" />
 
   <!-- Odometry -->
