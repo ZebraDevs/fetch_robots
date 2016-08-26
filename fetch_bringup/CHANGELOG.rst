@@ -2,6 +2,12 @@
 Changelog for package fetch_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add install rule for software runstop
+* Software runstop support via controller and topics
+* Contributors: Eric Relson
+
 0.7.2 (2016-06-14)
 ------------------
 
