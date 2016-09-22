@@ -14,6 +14,10 @@ arm_controller:
     root: "torso_lift_link"
     tip: "gripper_link"
     autostart: true
+  cartesian_twist:
+    type: "robot_controllers/CartesianTwistController"
+    root_name: torso_lift_link 
+    tip_name: wrist_roll_link
 
 arm_with_torso_controller:
   follow_joint_trajectory:
@@ -55,19 +59,13 @@ base_controller:
   # use laser to only slowly collide with things
   laser_safety_dist: 1.0
 
-arm_twist:
-  type: "robot_controllers/CartesianTwistController"
-  root_name: torso_lift_link 
-  tip_name: wrist_roll_link
-
 robot_driver:
   default_controllers:
-    - arm_twist
-    - "arm_controller/gravity_compensation"
     - "arm_controller/follow_joint_trajectory"
+    - "arm_controller/gravity_compensation"
+    - "arm_controller/cartesian_twist"
     - "arm_with_torso_controller/follow_joint_trajectory"
+    - "base_controller"
     - "head_controller/follow_joint_trajectory"
     - "head_controller/point_head"
     - "torso_controller/follow_joint_trajectory"
-    - "base_controller"
-    

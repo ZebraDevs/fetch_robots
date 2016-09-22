@@ -8,7 +8,7 @@
   </node>
 
   <node name="teleop" pkg="fetch_teleop" type="joystick_teleop">
-    <rosparam file="$(find fetch_bringup)/config/key_mapping.yaml" command="load" />
+    <rosparam file="$(find fetch_bringup)/config/arm_teleop_key_mapping.yaml" command="load" />
   </node>
 
 
