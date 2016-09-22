@@ -1,9 +1,0 @@
-arm/button_body_frame: 9
-arm/button_end_frame: 11
-arm/button_roll_pitch: 2
-arm/axis_x: 3
-arm/axis_y: 0
-arm/axis_z: 1
-arm/axis_roll: 4
-arm/axis_pitch: 5
-arm/axis_yaw: 2
