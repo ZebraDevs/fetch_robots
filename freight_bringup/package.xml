@@ -13,8 +13,7 @@
   <run_depend>fetch_teleop</run_depend>
   <run_depend>graft</run_depend>
   <run_depend>joy</run_depend>
-  <run_depend>pico_flexx_driver</run_depend>
   <run_depend>robot_state_publisher</run_depend>
-  <run_depend version_gte="0.0.4">sick_tim</run_depend>
-  <run_depend version_gt="1.6.0">sixad</run_depend>
+  <run_depend>sick_tim</run_depend>
+  <run_depend>sixad</run_depend>
 </package>
