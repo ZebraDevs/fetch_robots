@@ -2,8 +2,8 @@
 Changelog for package freight_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.7.4 (2017-03-28)
+------------------
 * Updates for research robots
 * Contributors: Michael Ferguson
 
