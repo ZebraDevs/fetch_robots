@@ -13,3 +13,7 @@ base_controller:
 robot_driver:
   default_controllers:
     - "base_controller"
+
+# Publish raw IMU data for drift debug
+imu:
+  publish_raw: true
