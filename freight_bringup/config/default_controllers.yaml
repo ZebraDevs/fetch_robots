@@ -1,5 +1,5 @@
 base_controller:
-  type: "robot_controllers/DiffDriveBaseController"
+  type: "freight_base_controller/DiffDriveBaseController"
   max_velocity_x: 1.5
   max_acceleration_x: 2.0
   # hold position
