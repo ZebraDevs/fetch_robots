@@ -58,4 +58,7 @@
     <arg name="flags" value="-a -b -g" />
   </include>
 
+  <!-- Diagnostics Aggregator -->
+  <include file="$(find fetch_bringup)/launch/include/aggregator.launch.xml" />
+
 </launch>

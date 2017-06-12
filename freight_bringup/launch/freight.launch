@@ -32,4 +32,7 @@
   <!-- Teleop -->
   <include file="$(find freight_bringup)/launch/include/teleop.launch.xml" />
 
+  <!-- Diagnostics Aggregator -->
+  <include file="$(find freight_bringup)/launch/include/aggregator.launch.xml" />
+
 </launch>

@@ -9,6 +9,7 @@
   <license>Proprietary</license>
   <buildtool_depend>catkin</buildtool_depend>
   <run_depend>depth_image_proc</run_depend>
+  <run_depend>diagnostic_aggregator</run_depend>
   <run_depend>fetch_description</run_depend>
   <run_depend>fetch_drivers</run_depend>
   <run_depend>fetch_teleop</run_depend>
