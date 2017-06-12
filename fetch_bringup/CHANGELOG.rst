@@ -2,8 +2,8 @@
 Changelog for package fetch_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.7.5 (2017-06-12)
+------------------
 * Add diagnostics aggregator launch and config
 * add cartesian twist controller to arm defaults
 * Contributors: Eric Relson, Hanjun Song, Michael Ferguson

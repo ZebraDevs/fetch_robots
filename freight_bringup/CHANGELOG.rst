@@ -2,8 +2,8 @@
 Changelog for package freight_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.7.5 (2017-06-12)
+------------------
 * Add diagnostics aggregator launch and config
 * Contributors: Eric Relson, Michael Ferguson
 
