@@ -1,4 +1,7 @@
 <launch>
+  <!-- robot specific information on parameters https://github.com/ros-infrastructure/rep/pull/104 -->
+  <param name="robot/type" value="freight" />
+  <param name="robot/name" textfile="/etc/hostname" />
 
   <!-- Calibration -->
   <param name="calibration_date" value="uncalibrated"/>

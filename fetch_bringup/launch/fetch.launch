@@ -1,4 +1,7 @@
 <launch>
+  <!-- robot specific information on parameters https://github.com/ros-infrastructure/rep/pull/104 -->
+  <param name="robot/type" value="fetch" />
+  <param name="robot/name" textfile="/etc/hostname" />
 
   <!-- GDB Debug Option -->
   <arg name="debug" default="false" />
