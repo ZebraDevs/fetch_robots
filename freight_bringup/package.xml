@@ -16,5 +16,4 @@
   <run_depend>joy</run_depend>
   <run_depend>robot_state_publisher</run_depend>
   <run_depend>sick_tim</run_depend>
-  <run_depend>sixad</run_depend>
 </package>
