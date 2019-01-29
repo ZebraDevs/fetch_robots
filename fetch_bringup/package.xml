@@ -1,24 +1,29 @@
-<package>
+<?xml version="1.0"?>
+<package format="2">
   <name>fetch_bringup</name>
   <version>0.7.5</version>
   <description>
     Bringup for fetch
   </description>
+
   <author>Michael Ferguson</author>
-  <maintainer email="mferguson@fetchrobotics.com">Michael Ferguson</maintainer>
+  <maintainer email="erelson@fetchrobotics.com">Eric Relson</maintainer>
+
   <license>Proprietary</license>
+
   <buildtool_depend>catkin</buildtool_depend>
-  <run_depend>depth_image_proc</run_depend>
-  <run_depend>diagnostic_aggregator</run_depend>
-  <run_depend>fetch_description</run_depend>
-  <run_depend>fetch_drivers</run_depend>
-  <run_depend>fetch_teleop</run_depend>
-  <run_depend>graft</run_depend>
-  <run_depend>image_proc</run_depend>
-  <run_depend>joy</run_depend>
-  <run_depend>openni2_launch</run_depend>
-  <run_depend>robot_controllers_msgs</run_depend>
-  <run_depend>robot_state_publisher</run_depend>
-  <run_depend>sensor_msgs</run_depend>
-  <run_depend version_gte="0.0.4">sick_tim</run_depend>
+  <exec_depend>depth_image_proc</exec_depend>
+  <exec_depend>diagnostic_aggregator</exec_depend>
+  <exec_depend>fetch_description</exec_depend>
+  <exec_depend>fetch_drivers</exec_depend>
+  <exec_depend>fetch_teleop</exec_depend>
+  <exec_depend>graft</exec_depend>
+  <exec_depend>image_proc</exec_depend>
+  <exec_depend>joy</exec_depend>
+  <exec_depend>openni2_launch</exec_depend>
+  <exec_depend>ps3joy</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend version_gte="0.0.4">sick_tim</exec_depend>
+
 </package>

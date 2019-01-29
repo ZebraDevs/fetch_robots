@@ -1,19 +1,25 @@
-<package>
+<?xml version="1.0"?>
+<package format="2">
   <name>freight_bringup</name>
   <version>0.7.5</version>
   <description>
     Bringup for freight
   </description>
+
   <author>Michael Ferguson</author>
-  <maintainer email="mferguson@fetchrobotics.com">Michael Ferguson</maintainer>
+  <maintainer email="erelson@fetchrobotics.com">Eric Relson</maintainer>
+
   <license>Proprietary</license>
+
   <buildtool_depend>catkin</buildtool_depend>
-  <run_depend>diagnostic_aggregator</run_depend>
-  <run_depend>fetch_description</run_depend>
-  <run_depend>fetch_drivers</run_depend>
-  <run_depend>fetch_teleop</run_depend>
-  <run_depend>graft</run_depend>
-  <run_depend>joy</run_depend>
-  <run_depend>robot_state_publisher</run_depend>
-  <run_depend>sick_tim</run_depend>
+  <exec_depend>diagnostic_aggregator</exec_depend>
+  <exec_depend>fetch_description</exec_depend>
+  <exec_depend>fetch_drivers</exec_depend>
+  <exec_depend>fetch_teleop</exec_depend>
+  <exec_depend>graft</exec_depend>
+  <exec_depend>joy</exec_depend>
+  <exec_depend>ps3joy</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>sick_tim</exec_depend>
+
 </package>
