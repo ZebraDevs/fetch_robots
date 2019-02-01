@@ -1,0 +1,5 @@
+fetch-system-config (0.1-0) bionic; urgency=medium
+
+  * initial release of melodic packages
+
+ -- Eric Relson <erelson@fetchrobotics.com> Fri, 01 Feb 2019 10:50:25 -0800

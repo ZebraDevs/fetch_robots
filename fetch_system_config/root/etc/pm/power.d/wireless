@@ -1,0 +1,4 @@
+#!/bin/sh
+
+# This is essential for reliable robot wifi
+/sbin/iwconfig wlan0 power off
