@@ -7,11 +7,16 @@ of this package, are on the 'master' branch.
 # How to Manually Build
 
 ```bash
-git clone git@github.com:fetchrobotics/fetch_binary_drivers.git # -b melodic-devel
-cd fetch_binary_drivers/fetch-system-config
+git clone git@github.com:fetchrobotics/fetch_ros.git # -b melodic-devel
+cd fetch_ros/fetch_system_config
 dpkg-buildpackage -us -uc
 # Debians are placed in the parent directory
 cd ..
 ls *system*.deb
 ```
 
+# TODO: catkin/standardize
+
+This isn't a GBP anymore, it will be published to:
+
+https://github.com/fetchrobotics-gbp/fetch_robots-release
