@@ -1,0 +1,19 @@
+all: binary_driver
+
+# TODO: There are some more things to automate.
+DRIVER_VERSION = 0.8.0
+TARBALL = build/fetch-drivers-0.8.0.tar.gz
+TARBALL_URL = http://packages.fetchrobotics.com/binaries/fetch-drivers-0.8.0.tar.gz
+SOURCE_DIR = build/output
+MD5SUM_FILE = fetch-drivers-0.8.0.tar.gz.md5sum
+UNPACK_CMD = tar zxvf
+include $(shell rospack find mk)/download_unpack_build.mk
+
+binary_driver: $(SOURCE_DIR)/unpacked
+	echo "binary driver built in: " $(SOURCE_DIR)
+
+clean:
+	-rm -rf $(SOURCE_DIR)
+
+wipe: clean
+	-rm -rf build
