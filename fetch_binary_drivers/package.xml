@@ -29,9 +29,28 @@
 
 
   <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- mk is actually the only build time depend; it just pulls down a the compiled objects. -->
   <build_depend>mk</build_depend>
-  <exec_depend>actionlib</exec_depend>
+
+  <!-- system dependencies which the drivers dyanmically link against -->
   <exec_depend>boost</exec_depend>
+  <exec_depend>curl</exec_depend>
+  <exec_depend>python</exec_depend>
+  <exec_depend>yaml-cpp</exec_depend>
+
+  <!-- ros msgs which the drivers depend on -->
+  <exec_depend>actionlib_msgs</exec_depend>
+  <exec_depend>diagnostic_msgs</exec_depend>
+  <exec_depend>fetch_driver_msgs</exec_depend>
+  <exec_depend>fetch_auto_dock_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>power_msgs</exec_depend>
+  <exec_depend>robot_calibration_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+
+  <!-- ros dependencies wich the drivers dynamically link against -->
+  <exec_depend>actionlib</exec_depend>
   <exec_depend>robot_controllers</exec_depend>
   <exec_depend>robot_controllers_interface</exec_depend>
   <exec_depend>rosconsole</exec_depend>

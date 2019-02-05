@@ -20,12 +20,16 @@ find_package(catkin REQUIRED
 ## System dependencies are found with CMake's conventions
 find_package(Boost REQUIRED
   COMPONENTS
+    chrono
     filesystem
     program_options
-    python
-    thread
+    regex
     system
+    thread
 )
+find_package(CURL REQUIRED)
+find_package(PythonLibs REQUIRED)
+find_package(yaml-cpp REQUIRED)
 
 add_custom_target(
   binary_driver ALL
@@ -43,15 +47,27 @@ add_custom_target(
 ###################################
 ## The catkin_package macro generates cmake config files for your package
 ## Declare things to be passed to dependent projects
-## INCLUDE_DIRS: uncomment this if your package contains header files
 ## LIBRARIES: libraries you create in this project that dependent projects also need
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES fetch_binary_drivers
-#  CATKIN_DEPENDS other_catkin_pkg
-#  DEPENDS system_lib
+   LIBRARIES fetch_drivers
+   CATKIN_DEPENDS
+     actionlib
+     actionlib_msgs
+     diagnostic_msgs
+     fetch_driver_msgs
+     fetch_auto_dock_msgs
+     nav_msgs
+     power_msgs
+     robot_calibration_msgs
+     roscpp
+     sensor_msgs
+   DEPENDS
+     Boost
+     CURL
+     PYTHON
+     YAML_CPP
 )
 
 ###########
