@@ -36,8 +36,8 @@ Previously, we built our drivers on a private buildbot, and hosted them on our o
 We also had a manually synced mirror of the ros packages. This allowed us to ensure we tested the versions of dependancies which were on our mirror.
 The old process was not as automated as we would like.
 
-We're in the process of testing melodic, and setting up our hosted stable mirror, and documenting the upgrade process to ensure Fetch Research Platform customers have a smooth transition.
+We're in the process of testing ROS Melodic, and setting up our hosted stable mirror, and documenting the upgrade process to ensure Fetch Research Platform customers have a smooth transition.
 
-We will announce to our customers when we're officially ready and supporting melodic.
+We will announce to our customers when we're officially ready and supporting ROS Melodic.
 
 See https://docs.fetchrobotics.com for more information.

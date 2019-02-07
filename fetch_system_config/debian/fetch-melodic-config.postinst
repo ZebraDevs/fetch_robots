@@ -40,13 +40,12 @@ case "$1" in
             cp /opt/ros/melodic/share/fetch_bringup/launch/fetch.launch /etc/ros/melodic/robot.launch
         fi
 
-        # TODO this file is missing in 18.04?
-        # Override /etc/acpi/powerbtn.sh
-        echo "/sbin/shutdown -h now \"Power button pressed\"" > /etc/acpi/powerbtn.sh
-        echo "exit 0" >> /etc/acpi/powerbtn.sh
+        # Workaround for gnome-settings-daemon not enabling immediate shutdown
+        # https://unix.stackexchange.com/a/416569
+        hostnamectl set-chassis vm
 
         # Do not wait for GRUB (we're headless)
-        sed -i "s/GRUB_TIMEOUT=.*\"\"/GRUB_TIMEOUT=10/" /etc/default/grub
+        sed -i "s/GRUB_TIMEOUT=.*\"\"/GRUB_TIMEOUT=5/" /etc/default/grub
         echo "GRUB_RECORDFAIL_TIMEOUT=\$GRUB_TIMEOUT" >> /etc/default/grub
 
         # Disable apport

@@ -16,9 +16,7 @@ Depends: ${misc:Depends},
          ros-melodic-ros
 Description: Configuration for Fetch on Melodic
   This package will start ROS Melodic at bootup
-Conflicts: fetch-indigo-config,
-           fetch-system-config,
-           freight-indigo-config,
+Conflicts: fetch-system-config,
            freight-melodic-config,
            freight-system-config
 
@@ -31,8 +29,6 @@ Depends: ${misc:Depends},
          ros-melodic-ros
 Description: Configuration for Freight on Melodic
   This package will start ROS Melodic at bootup
-Conflicts: fetch-indigo-config,
-           fetch-melodic-config,
+Conflicts: fetch-melodic-config,
            fetch-system-config,
-           freight-system-config,
-           freight-indigo-config
+           freight-system-config
