@@ -121,6 +121,10 @@ EOF
 makestep 1.0 100' >>/etc/chrony/chrony.conf
         fi
 
+        # Disable wifi power management in 18.04
+        # https://gist.github.com/jcberthon/ea8cfe278998968ba7c5a95344bc8b55
+        sed -i "s/wifi.powersave = 3/wifi.powersave = 2/" /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
+
     ;;
 
     abort-upgrade|abort-remove|abort-deconfigure)
