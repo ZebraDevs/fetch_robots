@@ -2,6 +2,18 @@
 Changelog for package fetch_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.8.0 (2019-02-13)
+------------------
+* Add autodocking to default robot launch (`#28 <https://github.com/fetchrobotics/fetch_robots/issues/28>`_)
+  Also update package.xml
+* sixad depend not needed anymore on bionic (`#24 <https://github.com/fetchrobotics/fetch_robots/issues/24>`_)
+  * sixad depend not needed anymore on bionic
+  * remove sixad from fetch_bringup
+* [ros param] adds robot/name robot/type (`#22 <https://github.com/fetchrobotics/fetch_robots/issues/22>`_)
+  add robot specific information on rosparam, see https://github.com/ros-infrastructure/rep/pull/104
+  Related to: `ros-infrastructure/rep#104 <https://github.com/ros-infrastructure/rep/issues/104>`_
+* Contributors: Eric Relson, Kei Okada, Steffen Fuchs
+
 0.7.5 (2017-06-12)
 ------------------
 * Add diagnostics aggregator launch and config
