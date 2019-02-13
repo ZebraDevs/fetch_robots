@@ -35,6 +35,9 @@
   <!-- Teleop -->
   <include file="$(find freight_bringup)/launch/include/teleop.launch.xml" />
 
+  <!-- Autodocking -->
+  <include file="$(find fetch_open_auto_dock)/launch/auto_dock.launch" />
+
   <!-- Diagnostics Aggregator -->
   <include file="$(find freight_bringup)/launch/include/aggregator.launch.xml" />
 

@@ -56,6 +56,9 @@
   <!-- Teleop -->
   <include file="$(find fetch_bringup)/launch/include/teleop.launch.xml" />
 
+  <!-- Autodocking -->
+  <include file="$(find fetch_open_auto_dock)/launch/auto_dock.launch" />
+
   <!-- Software Runstop -->
   <include file="$(find fetch_bringup)/launch/include/runstop.launch.xml">
     <arg name="flags" value="-a -b -g" />
