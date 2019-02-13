@@ -1,0 +1,73 @@
+compress
+
+/var/log/ros/*/*.log {
+    # Run scripts once per set of logs
+    sharedscripts
+    firstaction
+        . /opt/ros/melodic/setup.sh
+        # get run_id of ROS if it is running
+        RUN_ID=`rosparam get /run_id 2>/dev/null`
+        # Create a tarball if ROS is no longer using a given log subdirectory
+        for i in $( ls /var/log/ros | grep -v \.gz$ ); do
+            if [ $i != "$RUN_ID" ] && [ -d $i ]; then
+                cd /var/log/ros && tar -zpcf $i.tar.gz $i
+            fi
+        done
+    endscript
+    postrotate
+        . /opt/ros/melodic/setup.sh
+        RUN_ID=`rosparam get /run_id 2>/dev/null`
+        # Remove log subdirectory after tarball has been created
+        for i in $( ls /var/log/ros | grep -v \.gz$ ); do
+            if [ $i != "$RUN_ID" ] && [ -e /var/log/ros/$i.tar.gz ]; then
+                rm -r /var/log/ros/$i
+            fi
+        done
+        # Delete tarballs after a week
+        for i in $( find /var/log/ros -mtime 7 | grep \.gz$ ); do
+            rm $i
+        done
+    endscript
+    # Do not report errors if ROS has not created logs
+    missingok
+    # Rotate logs daily
+    daily
+    # Keep 1 weeks worth of logs for active processes
+    rotate 6
+    # ROS continues to write to the old log
+    # 01 Jan 2013 - BUG: Sending SIGHUP to the ROS does not cause it to write to a new log.
+    copytruncate
+    # Compress old logs
+    delaycompress
+}
+
+/var/log/ros/roscore.log {
+    maxsize=50M
+    rotate 3
+    missingok
+    delaycompress
+    # 01 Jan 2013 - BUG: Sending SIGHUP to the ROS does not cause it to write to a new log.
+    copytruncate
+}
+
+/var/log/ros/robot.log {
+    maxsize=50M
+    rotate 7
+    missingok
+    delaycompress
+}
+
+/var/log/ros/sixad.log {
+    maxsize=50M
+    rotate 3
+    missingok
+    delaycompress
+}
+
+/var/log/ros/robot_log.csv {
+    maxsize 100M
+    weekly
+    rotate 8
+    missingok
+    compress
+}

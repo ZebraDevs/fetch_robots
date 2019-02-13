@@ -1,0 +1,18 @@
+[Unit]
+Description=Job that launches roscore once the system has started
+After=multi-user.target
+
+[Install]
+WantedBy=multi-user.target
+
+[Service]
+Environment="ROS_LOG_DIR=/var/log/ros"
+Restart=on-failure
+StandardOutput=file:/var/log/ros/roscore.log
+StandardError=file:/var/log/ros/roscore.log
+
+ExecStartPre=/bin/bash /opt/ros/roscore_prestart.bash
+ExecStartPost=/bin/bash /opt/ros/roscore_poststart.bash
+User=ros
+ExecStart=/bin/bash -c ". /opt/ros/melodic/setup.bash && roscore"
+

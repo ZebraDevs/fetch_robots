@@ -1,0 +1,34 @@
+Source: fetch-system-config
+Section: main
+Priority: optional
+Maintainer: Eric Relson <erelson@fetchrobotics.com>
+Build-Depends: debhelper (>= 9.0.0),
+               dh-systemd (>= 1.5)
+Standards-Version: 3.9.4
+Homepage: www.fetchrobotics.com
+
+Package: fetch-melodic-config
+Architecture: any
+Depends: ${misc:Depends},
+         adduser,
+         chrony,
+         openssh-server,
+         ros-melodic-ros
+Description: Configuration for Fetch on Melodic
+  This package will start ROS Melodic at bootup
+Conflicts: fetch-system-config,
+           freight-melodic-config,
+           freight-system-config
+
+Package: freight-melodic-config
+Architecture: any
+Depends: ${misc:Depends},
+         adduser,
+         chrony,
+         openssh-server,
+         ros-melodic-ros
+Description: Configuration for Freight on Melodic
+  This package will start ROS Melodic at bootup
+Conflicts: fetch-melodic-config,
+           fetch-system-config,
+           freight-system-config

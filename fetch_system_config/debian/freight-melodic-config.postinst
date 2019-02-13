@@ -1,0 +1,141 @@
+#!/bin/bash
+
+set -e
+
+case "$1" in
+    "configure")
+        # Add ROS user, give access to audio/hardware
+        if ! getent passwd ros >/dev/null; then
+          adduser --disabled-password --quiet --system \
+            --no-create-home --home=/var/lib/ros --shell /bin/bash \
+            --gecos "ROS system user" --group ros
+        fi
+        adduser --quiet ros audio
+        adduser --quiet ros dialout
+        adduser --quiet ros plugdev
+        if ! getent group ros > /dev/null 2>&1; then
+            addgroup --system ros --quiet
+        fi
+        if [ "$(id -gn ros)" = "nogroup" ]; then
+            usermod -g ros ros
+        fi
+
+        # Setup /var/lib/ros as home directory
+        if [ ! -e "/var/lib/ros" ]; then
+            mkdir /var/lib/ros
+        fi
+        chown -R ros:ros /var/lib/ros
+            chmod 2775 /var/lib/ros
+
+        # Setup /var/log/ros for logging
+        if [ ! -e "/var/log/ros" ]; then
+            mkdir /var/log/ros
+        fi
+        chown -R ros:ros /var/log/ros
+        chmod 2775 /var/log/ros
+
+        # Copy the robot.launch if not already existent
+        if [ ! -e "/etc/ros/melodic/robot.launch" ]; then
+            mkdir -p /etc/ros/melodic
+            cp /opt/ros/melodic/share/freight_bringup/launch/freight.launch /etc/ros/melodic/robot.launch
+        fi
+
+        # Workaround for gnome-settings-daemon not enabling immediate shutdown
+        # https://unix.stackexchange.com/a/416569
+        hostnamectl set-chassis vm
+
+        # Do not wait for GRUB (we're headless)
+        sed -i "s/GRUB_TIMEOUT=.*\"\"/GRUB_TIMEOUT=5/" /etc/default/grub
+        echo "GRUB_RECORDFAIL_TIMEOUT=\$GRUB_TIMEOUT" >> /etc/default/grub
+
+        # Disable apport
+        if [ -e "/etc/default/apport" ]; then
+            sed -i "s/enabled=1/enabled=0/g" /etc/default/apport
+        fi
+
+        # Run logrotation cron job hourly
+        if [ ! -e "/etc/cron.hourly/logrotate" ]; then
+            cp /etc/cron.daily/logrotate /etc/cron.hourly/logrotate
+        fi
+
+        # Probalby null-op; We replace the update-rc.d with upstart job so that sixad starts properly
+        update-rc.d -f sixad remove
+
+        ### Set up ethernet to ensure static network for internal robot communications.
+        # Reboot required for changes to take effect.
+        # Modify default/grub to not use new-style network device naming
+        sed -i "s/GRUB_CMDLINE_LINUX=\"\"/GRUB_CMDLINE_LINUX=\"net.ifnames=0 biosdevname=0\"/" /etc/default/grub
+        update-grub
+        # Determine which device to map to eth0 and eth1 and update /etc/udev/rules.d/70-persistent-net.rules
+        declare -a x=()
+        lines=$(udevadm info -e | grep -e "ID_NET_NAME_MAC=e.*[a-f0-9]\{12\}$")
+        regexmac="ID_NET_NAME_MAC=e.*([a-f0-9]{12})$"
+        for f in $lines
+        do
+            if [[ $f =~ $regexmac ]]; then
+                macs+="$(echo ${BASH_REMATCH[1]} | sed -r 's/.{2}/&:/g' | sed -r 's/://g6') "
+            fi
+        done
+
+        # Make a backup, then remove any existing entries for eth0, eth1 from udev rules
+        if [[ -f /etc/udev/rules.d/70-persistent-net.rules ]]; then
+            if [[ ! -f /etc/udev/rules.d/70-persistent-net.rules.bak ]]; then
+                cp -n /etc/udev/rules.d/70-persistent-net.rules /etc/udev/rules.d/70-persistent-net.rules.bak
+            fi
+            cp -f /etc/udev/rules.d/70-persistent-net.rules /tmp/70-persistent-net.rules
+            grep -v -E "eth0|eth1" /tmp/70-persistent-net.rules > /etc/udev/rules.d/70-persistent-net.rules | true
+        fi
+
+        # Add our new udev rules for eth0, eth1
+        mac_array=($macs)
+        udev_line='SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="MAC_ADDRESS", ATTR{dev_id}=="0x0", ATTR{type}=="1", NAME='
+        if [[ ${mac_array[0]} > ${mac_array[1]} ]]; then
+          echo ${udev_line/MAC_ADDRESS/${mac_array[0]}}'"eth0"' >> /etc/udev/rules.d/70-persistent-net.rules
+          echo ${udev_line/MAC_ADDRESS/${mac_array[1]}}'"eth1"' >> /etc/udev/rules.d/70-persistent-net.rules
+        else
+          echo ${udev_line/MAC_ADDRESS/${mac_array[1]}}'"eth0"' >> /etc/udev/rules.d/70-persistent-net.rules
+          echo ${udev_line/MAC_ADDRESS/${mac_array[0]}}'"eth1"' >> /etc/udev/rules.d/70-persistent-net.rules
+        fi
+        # Add netplan to set static IPs
+        if [[ ! -f /etc/netplan/99-fetch-ethernet.yaml ]]; then
+            cat << EOF > /etc/netplan/99-fetch-ethernet.yaml
+# Fetch research robots require the below configuration for eth1.
+# The configuration for eth0 is left to DHCP by default, but can be set to
+# another static IP by uncommenting the block below and running `sudo netplan try`.
+network:
+  version: 2
+  ethernets:
+    #eth0:
+    #  addresses: [172.42.42.1/24]
+    #  gateway4: 172.42.42.1
+    eth1:
+      addresses: [10.42.42.1/24]
+      gateway4: 10.42.42.1
+EOF
+        fi
+
+        # Setup chrony to allow time jumps on start
+        if [ ! `grep makestep /etc/chrony/chrony.conf >/dev/null && echo $?` ]; then
+            echo '
+# This lets the time jump at startup
+makestep 1.0 100' >>/etc/chrony/chrony.conf
+        fi
+
+        # Disable wifi power management in 18.04
+        # https://gist.github.com/jcberthon/ea8cfe278998968ba7c5a95344bc8b55
+        sed -i "s/wifi.powersave = 3/wifi.powersave = 2/" /etc/NetworkManager/conf.d/default-wifi-powersave-on.conf
+
+    ;;
+
+    abort-upgrade|abort-remove|abort-deconfigure)
+    ;;
+
+    *)
+        echo "postinst called with unknown argument \`$1'" >&2
+        exit 1
+    ;;
+esac
+
+#DEBHELPER#
+
+exit 0

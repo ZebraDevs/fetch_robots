@@ -1,0 +1,15 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Grab the following .service files
+override_dh_systemd_enable:
+	dh_systemd_enable --name=roscore
+	dh_systemd_enable --name=robot
+	dh_systemd_enable --name=ps3joy
+	#dh_systemd_enable --name=soundplay # TBD
+
+override_dh_installlogrotate:
+	dh_installlogrotate --name=ros
+
+%:
+	dh $@ --with=systemd

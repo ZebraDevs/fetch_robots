@@ -1,0 +1,16 @@
+[Unit]
+Description=Job that launches the ps3joy node once roscore has started
+After=roscore.service
+BindsTo=roscore.service
+
+[Install]
+WantedBy=roscore.service
+
+[Service]
+Environment="ROS_LOG_DIR=/var/log/ros"
+Restart=on-failure
+StandardOutput=file:/var/log/ros/ps3joy.log
+StandardError=file:/var/log/ros/ps3joy.log
+
+ExecStart=/bin/bash -c ". /opt/ros/melodic/setup.bash && rosrun ps3joy ps3joy.py --inactivity-timeout=3600"
+
