@@ -2,6 +2,15 @@
 Changelog for package fetch_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.8.2 (2019-02-15)
+------------------
+* Merge pull request `#30 <https://github.com/fetchrobotics/fetch_robots/issues/30>`_ from moriarty/rebased-pr-26
+  [bringup] package format v2 (originally `#26 <https://github.com/fetchrobotics/fetch_robots/issues/26>`_)
+* Add ps3joy exec dep; update to package.xml 2.0
+  Also removed robot_controllers_msgs for fetch_bringup. This dependency
+  is part of fetch_drivers package already.
+* Contributors: Alex Moriarty, Eric Relson
+
 0.8.1 (2019-02-15)
 ------------------
 

@@ -2,6 +2,15 @@
 Changelog for package fetch_drivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.8.2 (2019-02-15)
+------------------
+* [fetch_driver] Makefile and mk depend on rospack
+  mk uses rospack internally but we don't get the rospack dependency.
+  https://github.com/ros/ros/issues/204
+  We also call rospack in Makefile.tarball so we should directly depend on
+  it instead of assuming it is depended on by ros/core/mk.
+* Contributors: Alexander Moriarty
+
 0.8.1 (2019-02-15)
 ------------------
 * Merge pull request `#29 <https://github.com/fetchrobotics/fetch_robots/issues/29>`_ from moriarty/fix-build-deps
