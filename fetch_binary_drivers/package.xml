@@ -30,8 +30,9 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <!-- mk is actually the only build time depend; it just pulls down a the compiled objects. -->
+  <!-- mk and rospack are the only build time depend; it just pulls down a the compiled objects. -->
   <build_depend>mk</build_depend>
+  <build_depend>rospack</build_depend>
 
   <!-- system dependencies which the drivers dyanmically link against -->
   <build_depend>boost</build_depend>
