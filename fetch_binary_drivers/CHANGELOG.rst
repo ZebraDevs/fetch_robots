@@ -2,8 +2,45 @@
 Changelog for package fetch_drivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.8.1 (2019-02-15)
+------------------
+* Merge pull request `#29 <https://github.com/fetchrobotics/fetch_robots/issues/29>`_ from moriarty/fix-build-deps
+  [fetch_drivers] exec_depend -> build_depend
+  I left find_package in the CMakeLists.txt for these dependencies.
+* Contributors: Alexander Moriarty, Carl Saldanha
+
 0.8.0 (2019-01-30)
 ------------------
+* Merge pull request `#27 <https://github.com/fetchrobotics/fetch_robots/issues/27>`_ from moriarty/fetch-binary-drivers
+  [fetch_binary_drivers] new [fetch_drivers] package
+* [fetch_drivers] add more dependencies
+  All these dependencies are exec_dependencies because this
+  package doesn't compile anything.
+  They're also in the CMakeLists.txt in the catkin_package and find_package to be safe.
+* [fetch_binary_drivers] new [fetch_drivers] package
+  This is a new package providing the "fetch_drivers" which was previously
+  built internally and distributed as a binary only debian package.
+  We will officially announce when the upgrade from Indigo->Melodic is
+  ready.
+  18.04 and ROS Melodic on the Fetch Research Platforms is still being
+  tested.
+  The process isn't straight foward as there are calibration files
+  which you will want to back-up before the upgrade.
+  This `fetch_drivers` package also won't start like it use to because of
+  the change from `upstart` to `systemd`.
+  That requires `fetch_system_config` which will be open sourced soon.
+  This `fetch_binary_drivers` package is part of a plan to distribute
+  updates and upgrades to Fetch Research Platform customers faster in the future.
+  This relates to `fetchrobotics/fetch_ros#63 <https://github.com/fetchrobotics/fetch_ros/issues/63>`_
+  1. An officiall announcement will be made when everything is ready.
+  2. We will update and document the process on:
+  https://docs.fetchrobotics.com/
+  3. We will also announce via our mailing list, ros discourse and post on:
+  https://opensource.fetchrobotics.com/
+* Contributors: Alexander Moriarty, Carl Saldanha, Eric Relson
+
+0.8.0 / 2018.8  (2019-01-30)
+----------------------------
 * added public binary driver creation system for <https://github.com/fetchrobotics/fetch_binary_drivers>
 * Merge pull request `#1364 <https://github.com/fetchrobotics/fetch_drivers/issues/1364>`_ from dbking77/combined_gyro_zeroing_fix_2018.8
   Have zero gyro\_ state (for dual_imu_publisher), not just output message.
@@ -435,101 +472,6 @@ Changelog for package fetch_drivers
   * Updates for gyro glitches
 * Contributors: Derek King, Michael Ferguson
 
-Forthcoming
------------
-* Merge pull request `#27 <https://github.com/fetchrobotics/fetch_robots/issues/27>`_ from moriarty/fetch-binary-drivers
-  [fetch_binary_drivers] new [fetch_drivers] package
-* Ensure robots power off safely when instructed to
-  Also:
-  - Fix remaining indigo references
-  - Don't worry about conflicting packages that never existed
-  - String fixes
-* [fetch_drivers] add more dependencies
-  All these dependencies are exec_dependencies because this
-  package doesn't compile anything.
-  They're also in the CMakeLists.txt in the catkin_package and find_package to be safe.
-* System config debian components for ROS Melodic
-  Ported from internal Fetch Robotics code used for ROS Indigo/Ubuntu
-  14.04.  Updated to support ROS Melodic/Ubuntu 18.04.
-  Some key changes:
-  - Change from using upstart to using systemd (expect version >= 236)
-  - Correspondingly logs such as /var/log/upstart/robot.log are now
-  available in /var/log/ros/robot.log (as well as via journalctl -u
-  robot)
-  - Manually creates udev rules and updates grub boot arguments to ensure
-  consistent network device naming across different hardware. Uses
-  netplan to set static IP for internal robot communications.
-  - Sixad replaced with ps3joy (hopefully a better solution will be found)
-  - Slightly better logrotate rules
-  - Removed former joystick_monitor and soundplay upstarts
-* [fetch_binary_drivers] new [fetch_drivers] package
-  This is a new package providing the "fetch_drivers" which was previously
-  built internally and distributed as a binary only debian package.
-  We will officially announce when the upgrade from Indigo->Melodic is
-  ready.
-  18.04 and ROS Melodic on the Fetch Research Platforms is still being
-  tested.
-  The process isn't straight foward as there are calibration files
-  which you will want to back-up before the upgrade.
-  This `fetch_drivers` package also won't start like it use to because of
-  the change from `upstart` to `systemd`.
-  That requires `fetch_system_config` which will be open sourced soon.
-  This `fetch_binary_drivers` package is part of a plan to distribute
-  updates and upgrades to Fetch Research Platform customers faster in the future.
-  This relates to `fetchrobotics/fetch_ros#63 <https://github.com/fetchrobotics/fetch_ros/issues/63>`_
-  1. An officiall announcement will be made when everything is ready.
-  2. We will update and document the process on:
-  https://docs.fetchrobotics.com/
-  3. We will also announce via our mailing list, ros discourse and post on:
-  https://opensource.fetchrobotics.com/
-* Contributors: Alexander Moriarty, Carl Saldanha, Eric Relson
-
-* Merge pull request `#27 <https://github.com/fetchrobotics/fetch_robots/issues/27>`_ from moriarty/fetch-binary-drivers
-  [fetch_binary_drivers] new [fetch_drivers] package
-* Ensure robots power off safely when instructed to
-  Also:
-  - Fix remaining indigo references
-  - Don't worry about conflicting packages that never existed
-  - String fixes
-* [fetch_drivers] add more dependencies
-  All these dependencies are exec_dependencies because this
-  package doesn't compile anything.
-  They're also in the CMakeLists.txt in the catkin_package and find_package to be safe.
-* System config debian components for ROS Melodic
-  Ported from internal Fetch Robotics code used for ROS Indigo/Ubuntu
-  14.04.  Updated to support ROS Melodic/Ubuntu 18.04.
-  Some key changes:
-  - Change from using upstart to using systemd (expect version >= 236)
-  - Correspondingly logs such as /var/log/upstart/robot.log are now
-  available in /var/log/ros/robot.log (as well as via journalctl -u
-  robot)
-  - Manually creates udev rules and updates grub boot arguments to ensure
-  consistent network device naming across different hardware. Uses
-  netplan to set static IP for internal robot communications.
-  - Sixad replaced with ps3joy (hopefully a better solution will be found)
-  - Slightly better logrotate rules
-  - Removed former joystick_monitor and soundplay upstarts
-* [fetch_binary_drivers] new [fetch_drivers] package
-  This is a new package providing the "fetch_drivers" which was previously
-  built internally and distributed as a binary only debian package.
-  We will officially announce when the upgrade from Indigo->Melodic is
-  ready.
-  18.04 and ROS Melodic on the Fetch Research Platforms is still being
-  tested.
-  The process isn't straight foward as there are calibration files
-  which you will want to back-up before the upgrade.
-  This `fetch_drivers` package also won't start like it use to because of
-  the change from `upstart` to `systemd`.
-  That requires `fetch_system_config` which will be open sourced soon.
-  This `fetch_binary_drivers` package is part of a plan to distribute
-  updates and upgrades to Fetch Research Platform customers faster in the future.
-  This relates to `fetchrobotics/fetch_ros#63 <https://github.com/fetchrobotics/fetch_ros/issues/63>`_
-  1. An officiall announcement will be made when everything is ready.
-  2. We will update and document the process on:
-  https://docs.fetchrobotics.com/
-  3. We will also announce via our mailing list, ros discourse and post on:
-  https://opensource.fetchrobotics.com/
-* Contributors: Alexander Moriarty, Carl Saldanha, Eric Relson
 
 0.7.5 (2016-03-09)
 ------------------
