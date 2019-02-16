@@ -59,7 +59,7 @@
   <depend>roscpp</depend>
   <depend>rostime</depend>
   <depend>urdf</depend>
-  <depend>urdfdom</depend>
+  <depend>liburdfdom-dev</depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
