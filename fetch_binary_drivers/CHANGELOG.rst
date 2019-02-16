@@ -2,6 +2,11 @@
 Changelog for package fetch_drivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.8.3 (2019-02-15)
+------------------
+* Add depend urdfdom, and switch to <depend> (`#32 <https://github.com/fetchrobotics/fetch_robots/issues/32>`_)
+* Contributors: Alexander Moriarty
+
 0.8.2 (2019-02-15)
 ------------------
 * [fetch_driver] Makefile and mk depend on rospack
