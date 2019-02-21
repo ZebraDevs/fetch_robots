@@ -2,8 +2,8 @@
 Changelog for package fetch_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.8.4 (2019-02-21)
+------------------
 * Add additional convenience packages as deps (`#33 <https://github.com/fetchrobotics/fetch_robots/issues/33>`_)
   * Add additional convenience packages as deps
   * system config deb pulls in rest of debs
