@@ -7,8 +7,8 @@
   </description>
 
   <author>Michael Ferguson</author>
-  <maintainer email="opensource@fetchrobotics.com">Fetch Robotics Open Source Team</maintainer>
   <maintainer email="erelson@fetchrobotics.com">Eric Relson</maintainer>
+  <maintainer email="opensource@fetchrobotics.com">Fetch Robotics Open Source Team</maintainer>
 
   <license>Proprietary</license>
 
@@ -17,6 +17,9 @@
   <exec_depend>diagnostic_aggregator</exec_depend>
   <exec_depend>fetch_description</exec_depend>
   <exec_depend>fetch_drivers</exec_depend>
+  <exec_depend>fetch_moveit_config</exec_depend>
+  <exec_depend>fetch_navigation</exec_depend>
+  <exec_depend>fetch_open_auto_dock</exec_depend>
   <exec_depend>fetch_teleop</exec_depend>
   <exec_depend>graft</exec_depend>
   <exec_depend>image_proc</exec_depend>

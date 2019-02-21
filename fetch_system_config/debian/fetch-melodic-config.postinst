@@ -96,29 +96,15 @@ case "$1" in
           echo ${udev_line/MAC_ADDRESS/${mac_array[1]}}'"eth0"' >> /etc/udev/rules.d/70-persistent-net.rules
           echo ${udev_line/MAC_ADDRESS/${mac_array[0]}}'"eth1"' >> /etc/udev/rules.d/70-persistent-net.rules
         fi
-        # Add netplan to set static IPs
-        if [[ ! -f /etc/netplan/99-fetch-ethernet.yaml ]]; then
-            cat << EOF > /etc/netplan/99-fetch-ethernet.yaml
-# Fetch research robots require the below configuration for eth1.
-# The configuration for eth0 is left to DHCP by default, but can be set to
-# another static IP by uncommenting the block below and running `sudo netplan try`.
-network:
-  version: 2
-  ethernets:
-    #eth0:
-    #  addresses: [172.42.42.1/24]
-    #  gateway4: 172.42.42.1
-    eth1:
-      addresses: [10.42.42.1/24]
-      gateway4: 10.42.42.1
-EOF
-        fi
+
+        # Add netplan to set static ethernet IPs; don't clobber existing modifications
+        cp -n /etc/netplan/99-fetch-ethernet.yaml.default /etc/netplan/99-fetch-ethernet.yaml
 
         # Setup chrony to allow time jumps on start
         if [ ! `grep makestep /etc/chrony/chrony.conf >/dev/null && echo $?` ]; then
             echo '
 # This lets the time jump at startup
-makestep 1.0 100' >>/etc/chrony/chrony.conf
+makestep 1.0 100' >> /etc/chrony/chrony.conf
         fi
 
         # Disable wifi power management in 18.04

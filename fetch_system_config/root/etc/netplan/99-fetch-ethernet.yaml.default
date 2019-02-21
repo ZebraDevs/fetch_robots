@@ -1,0 +1,12 @@
+# Fetch research robots require the below configuration for eth1.
+# The configuration for eth0 is left to DHCP by default, but can be set to
+# another static IP by uncommenting the block below and running `sudo netplan apply`.
+network:
+  version: 2
+  ethernets:
+    #eth0:
+    #  addresses: [172.42.42.1/24]
+    #  gateway4: 172.42.42.1
+    eth1:
+      addresses: [10.42.42.1/24]
+      gateway4: 10.42.42.1
