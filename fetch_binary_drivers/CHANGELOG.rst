@@ -2,6 +2,9 @@
 Changelog for package fetch_drivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 0.8.3 (2019-02-15)
 ------------------
 * Add depend urdfdom, and switch to <depend> (`#32 <https://github.com/fetchrobotics/fetch_robots/issues/32>`_)

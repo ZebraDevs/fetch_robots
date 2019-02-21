@@ -2,6 +2,14 @@
 Changelog for package fetch_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add additional convenience packages as deps (`#33 <https://github.com/fetchrobotics/fetch_robots/issues/33>`_)
+  * Add additional convenience packages as deps
+  * system config deb pulls in rest of debs
+  * Fix netplan configuration approach
+* Contributors: Eric Relson
+
 0.8.3 (2019-02-15)
 ------------------
 
