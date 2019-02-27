@@ -2,6 +2,12 @@
 Changelog for package fetch_drivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.8.5 (2019-02-26)
+------------------
+* [FIX] missing laser filter plugins (`#34 <https://github.com/fetchrobotics/fetch_robots/issues/34>`_)
+  The drivers work without them, but the robot drives reallly slow.
+* Contributors: Alex Moriarty
+
 0.8.4 (2019-02-21)
 ------------------
 

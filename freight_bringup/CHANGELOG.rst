@@ -2,6 +2,9 @@
 Changelog for package freight_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.8.5 (2019-02-26)
+------------------
+
 0.8.4 (2019-02-21)
 ------------------
 * Add additional convenience packages as deps (`#33 <https://github.com/fetchrobotics/fetch_robots/issues/33>`_)
