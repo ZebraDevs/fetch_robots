@@ -37,9 +37,12 @@ add_custom_target(
   COMMAND cmake -E make_directory ${CATKIN_DEVEL_PREFIX}/${CATKIN_GLOBAL_LIB_DESTINATION}/${PROJECT_NAME}
   COMMAND cmake -E copy_if_different ${PROJECT_SOURCE_DIR}/build/output/lib/libfetch_drivers.so               ${CATKIN_DEVEL_PREFIX}/${CATKIN_GLOBAL_LIB_DESTINATION}/libfetch_drivers.so
   COMMAND cmake -E copy_if_different ${PROJECT_SOURCE_DIR}/build/output/lib/libfetch_drivers_odva.so          ${CATKIN_DEVEL_PREFIX}/${CATKIN_GLOBAL_LIB_DESTINATION}/libfetch_drivers_odva.so
+  COMMAND cmake -E copy_if_different ${PROJECT_SOURCE_DIR}/build/output/lib/liblaser_filter_plugins.so        ${CATKIN_DEVEL_PREFIX}/${CATKIN_GLOBAL_LIB_DESTINATION}/liblaser_filter_plugins.so
+  COMMAND cmake -E copy_if_different ${PROJECT_SOURCE_DIR}/build/output/lib/liblaser_self_filter.so           ${CATKIN_DEVEL_PREFIX}/${CATKIN_GLOBAL_LIB_DESTINATION}/liblaser_self_filter.so
   COMMAND cmake -E copy ${PROJECT_SOURCE_DIR}/build/output/lib/${PROJECT_NAME}/*                              ${CATKIN_DEVEL_PREFIX}/${CATKIN_GLOBAL_LIB_DESTINATION}/${PROJECT_NAME}/
   COMMAND cmake -E make_directory ${CATKIN_DEVEL_PREFIX}/${CATKIN_GLOBAL_SHARE_DESTINATION}/${PROJECT_NAME}
-  COMMAND cmake -E copy_if_different ${PROJECT_SOURCE_DIR}/build/output/share/${PROJECT_NAME}/firmware.tar.gz ${CATKIN_DEVEL_PREFIX}/${CATKIN_GLOBAL_SHARE_DESTINATION}/${PROJECT_NAME}/ 
+  COMMAND cmake -E copy_if_different ${PROJECT_SOURCE_DIR}/build/output/share/${PROJECT_NAME}/firmware.tar.gz   ${CATKIN_DEVEL_PREFIX}/${CATKIN_GLOBAL_SHARE_DESTINATION}/${PROJECT_NAME}/
+  COMMAND cmake -E copy_if_different ${PROJECT_SOURCE_DIR}/build/output/share/${PROJECT_NAME}/laser_filters.xml ${CATKIN_DEVEL_PREFIX}/${CATKIN_GLOBAL_SHARE_DESTINATION}/${PROJECT_NAME}/
 )
 
 ###################################
