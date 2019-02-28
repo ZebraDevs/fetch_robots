@@ -2,6 +2,12 @@
 Changelog for package fetch_drivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+0.8.6 (2019-02-28)
+------------------
+* Merge pull request `#36 <https://github.com/fetchrobotics/fetch_robots/issues/36>`_ from fetchrobotics/install-laser-filters
+  [fetch_drivers] Catkin Install missed laser filters
+* Contributors: Alexander Moriarty, Carl Saldanha
+
 0.8.5 (2019-02-26)
 ------------------
 * [FIX] missing laser filter plugins (`#34 <https://github.com/fetchrobotics/fetch_robots/issues/34>`_)
