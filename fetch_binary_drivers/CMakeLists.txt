@@ -82,7 +82,11 @@ catkin_package(
 #############
 
 install(
-  FILES build/output/lib/libfetch_drivers.so build/output/lib/libfetch_drivers_odva.so
+  FILES
+    build/output/lib/libfetch_drivers.so
+    build/output/lib/libfetch_drivers_odva.so
+    build/output/lib/liblaser_filter_plugins.so
+    build/output/lib/liblaser_self_filter.so
   DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 )
 
