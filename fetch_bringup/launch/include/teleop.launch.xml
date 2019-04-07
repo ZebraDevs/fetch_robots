@@ -7,7 +7,13 @@
     <param name="dev" value="$(arg joy_device)"/>
   </node>
 
-  <node name="teleop" pkg="fetch_teleop" type="joystick_teleop" />
+  <node name="teleop" pkg="fetch_teleop" type="joystick_teleop">
+    <param name="use_torso" value="true" />
+    <param name="use_gripper" value="true" />
+    <param name="use_head" value="true" />
+    <param name="use_arm" value="true" />
+    <param name="use_base" value="true" />
+  </node>
 
   <node name="cmd_vel_mux" pkg="topic_tools" type="mux" respawn="true" args="base_controller/command /cmd_vel /teleop/cmd_vel">
     <remap from="mux" to="cmd_vel_mux" />
