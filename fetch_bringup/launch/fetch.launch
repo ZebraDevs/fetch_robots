@@ -2,6 +2,7 @@
   <!-- robot specific information on parameters https://github.com/ros-infrastructure/rep/pull/104 -->
   <param name="robot/type" value="fetch" />
   <param name="robot/name" textfile="/etc/hostname" />
+  <arg name="launch_teleop" default="true" />
 
   <!-- GDB Debug Option -->
   <arg name="debug" default="false" />
@@ -54,7 +55,7 @@
   <include file="$(find fetch_bringup)/launch/include/laser.launch.xml" />
 
   <!-- Teleop -->
-  <include file="$(find fetch_bringup)/launch/include/teleop.launch.xml" />
+  <include if="$(arg launch_teleop)" file="$(find fetch_bringup)/launch/include/teleop.launch.xml" />
 
   <!-- Autodocking -->
   <include file="$(find fetch_open_auto_dock)/launch/auto_dock.launch" />
