@@ -18,6 +18,10 @@ arm_controller:
     type: "robot_controllers/CartesianTwistController"
     root_name: torso_lift_link 
     tip_name: wrist_roll_link
+  cartesian_wrench:
+    type: "robot_controllers/CartesianWrenchController"
+    root_name: torso_lift_link
+    tip_name: wrist_roll_link
 
 arm_with_torso_controller:
   follow_joint_trajectory:
@@ -64,6 +68,7 @@ robot_driver:
     - "arm_controller/follow_joint_trajectory"
     - "arm_controller/gravity_compensation"
     - "arm_controller/cartesian_twist"
+    - "arm_controller/cartesian_wrench"
     - "arm_with_torso_controller/follow_joint_trajectory"
     - "base_controller"
     - "head_controller/follow_joint_trajectory"
