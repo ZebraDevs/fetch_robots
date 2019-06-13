@@ -15,12 +15,12 @@
     <param name="use_base" value="true" />
   </node>
 
-  <node name="cmd_vel_mux" pkg="topic_tools" type="mux" respawn="true" args="base_controller/command /cmd_vel /teleop/cmd_vel">
+  <node name="cmd_vel_mux" pkg="topic_tools" type="mux" args="base_controller/command /cmd_vel /teleop/cmd_vel">
     <remap from="mux" to="cmd_vel_mux" />
   </node>
 
   <node name="controller_reset" pkg="fetch_bringup" type="controller_reset.py" />
 
-  <node name="tuck_arm" pkg="fetch_teleop" type="tuck_arm.py" args="--joystick" respawn="true" />
+  <node name="tuck_arm" pkg="fetch_teleop" type="tuck_arm.py" args="--joystick" />
 
 </launch>
