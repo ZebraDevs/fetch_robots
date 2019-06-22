@@ -1,0 +1,12 @@
+[Unit]
+Description=Job that launches the ds4drv PS4 driver
+Requires=bluetooth.service
+After=bluetooth.service
+
+[Install]
+WantedBy=bluetooth.target
+
+[Service]
+Restart=on-abort
+ExecStart=/bin/bash -c "ds4drv --hidraw"
+

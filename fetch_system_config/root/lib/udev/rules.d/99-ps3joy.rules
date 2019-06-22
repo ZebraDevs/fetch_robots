@@ -1,1 +1,2 @@
-KERNEL=="js?", SUBSYSTEM=="input", ATTRS{name}=="PLAYSTATION(R)3 Controller *", SYMLINK+="ps3joy"
+KERNEL=="js?", SUBSYSTEM=="input", ATTRS{name}=="Sony Playstation SixAxis/DS3", SYMLINK+="ps3joy"
+KERNEL=="js?", SUBSYSTEM=="input", ATTRS{name}=="Sony Playstation SixAxis/DS3", SYMLINK+="fetch_joy"

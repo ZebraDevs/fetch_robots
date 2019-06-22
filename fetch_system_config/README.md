@@ -7,8 +7,10 @@ of this package, are on the 'master' branch.
 # How to Manually Build
 
 ```bash
-git clone git@github.com:fetchrobotics/fetch_ros.git # -b melodic-devel
-cd fetch_ros/fetch_system_config
+git clone git@github.com:fetchrobotics/fetch_robots.git # -b melodic-devel
+cd fetch_robots/fetch_system_config
+# Optionally auto-update changelog via git commits
+gbp dch --release
 dpkg-buildpackage -us -uc
 # Debians are placed in the parent directory
 cd ..
