@@ -55,7 +55,9 @@
   <include file="$(find fetch_bringup)/launch/include/laser.launch.xml" />
 
   <!-- Teleop -->
-  <include if="$(arg launch_teleop)" file="$(find fetch_bringup)/launch/include/teleop.launch.xml" />
+  <include if="$(arg launch_teleop)" file="$(find fetch_bringup)/launch/include/teleop.launch.xml">
+    <arg name="ps4" value="true" />
+  </include>
   <param name="joy/deadzone" value="0.05"/>
 
   <!-- Autodocking -->
