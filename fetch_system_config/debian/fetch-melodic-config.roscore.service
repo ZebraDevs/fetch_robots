@@ -8,8 +8,6 @@ WantedBy=multi-user.target
 [Service]
 Environment="ROS_LOG_DIR=/var/log/ros"
 Restart=on-failure
-StandardOutput=file:/var/log/ros/roscore.log
-StandardError=file:/var/log/ros/roscore.log
 
 ExecStartPre=/bin/bash /opt/ros/roscore_prestart.bash
 ExecStartPost=/bin/bash /opt/ros/roscore_poststart.bash

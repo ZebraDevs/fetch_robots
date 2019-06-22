@@ -41,25 +41,9 @@ compress
     delaycompress
 }
 
-/var/log/ros/roscore.log {
-    maxsize=50M
-    rotate 3
-    missingok
-    delaycompress
-    # 01 Jan 2013 - BUG: Sending SIGHUP to the ROS does not cause it to write to a new log.
-    copytruncate
-}
-
-/var/log/ros/robot.log {
+/var/log/robot.log {
     maxsize=50M
     rotate 7
-    missingok
-    delaycompress
-}
-
-/var/log/ros/sixad.log {
-    maxsize=50M
-    rotate 3
     missingok
     delaycompress
 }
