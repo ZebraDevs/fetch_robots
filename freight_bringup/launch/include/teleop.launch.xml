@@ -1,10 +1,19 @@
 <launch>
 
-  <arg name="joy_device" default="/dev/ps3joy"/>
+  <arg name="joy_device" default="/dev/fetch_joy"/>
+  <arg name="ps4" default="false"/>
 
-  <node name="joy" pkg="joy" type="joy_node">
+  <node name="joy_node" pkg="joy" type="joy_node">
     <param name="autorepeat_rate" value="1"/>
     <param name="dev" value="$(arg joy_device)"/>
+    <remap from="joy" to="joy_orig" if="$(arg ps4)"/>
+  </node>
+
+  <!-- remap joy to emulate ps3joy mappings -->
+  <node name="joy_remap" pkg="joy" type="joy_remap.py" if="$(arg ps4)">
+    <remap from="joy_in" to="joy_orig"/>
+    <remap from="joy_out" to="joy"/>
+    <rosparam command="load" file="$(find joy)/config/ps4joy.yaml"/>
   </node>
 
   <node name="teleop" pkg="fetch_teleop" type="joystick_teleop" output="screen">
