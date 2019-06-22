@@ -1,2 +1,4 @@
 KERNEL=="js?", SUBSYSTEM=="input", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c219", SYMLINK+="logitechF710"
 KERNEL=="js?", SUBSYSTEM=="input", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c21f", SYMLINK+="logitechF710"
+KERNEL=="js?", SUBSYSTEM=="input", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c219", SYMLINK+="fetch_joy"
+KERNEL=="js?", SUBSYSTEM=="input", ATTRS{idVendor}=="046d", ATTRS{idProduct}=="c21f", SYMLINK+="fetch_joy"
