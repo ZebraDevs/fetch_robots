@@ -13,7 +13,7 @@ freight_bringup | [![Build Status](http://build.ros.org/job/Msrc_uB__freight_bri
 
 ## ROS Buildfarm Devel
 
-Fetch Gazebo Package | Melodic Devel
--------------------- | -------------
+Package | Melodic Devel
+------- | -------------
 fetch_robots | [![Build Status](http://build.ros.org/job/Mdev__fetch_robots__ubuntu_bionic_amd64/badge/icon)](http://build.ros.org/job/Mdev__fetch_robots__ubuntu_bionic_amd64) |
 
