@@ -58,8 +58,8 @@ case "$1" in
             cp /etc/cron.daily/logrotate /etc/cron.hourly/logrotate
         fi
 
-        # Probalby null-op; We replace the update-rc.d with upstart job so that sixad starts properly
-        update-rc.d -f sixad remove
+        # For PS4 controller support, install ds4drv with pip, presuming that pip is installed already
+        pip install ds4drv
 
         ### Set up ethernet to ensure static network for internal robot communications.
         # Reboot required for changes to take effect.
