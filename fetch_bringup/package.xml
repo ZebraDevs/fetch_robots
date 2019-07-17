@@ -15,7 +15,6 @@
   <buildtool_depend>catkin</buildtool_depend>
   <exec_depend>depth_image_proc</exec_depend>
   <exec_depend>diagnostic_aggregator</exec_depend>
-  <exec_depend>ds4drv-pip</exec_depend>
   <exec_depend>fetch_description</exec_depend>
   <exec_depend>fetch_drivers</exec_depend>
   <exec_depend>fetch_moveit_config</exec_depend>
