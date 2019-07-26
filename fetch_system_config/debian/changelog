@@ -1,5 +1,17 @@
+fetch-system-config (0.2-0ubuntu1) bionic; urgency=medium
+
+  * Add PS4 support via ds4drv (via pip installation)
+  * Fix PS3 controller udev rule so that /dev/ps3joy is generated
+  * Modify logging by systemd services, due to limitations of v237
+  * Remove ethernet gateway specification
+  * Custom grub settings no long directly added to /etc/default/grub
+  * Modify grub to bypass Plymouth splash screen
+  * Set power button behavior so that computer shuts down properly
+
+ -- Eric Relson <erelson@fetchrobotics.com>  Fri, 26 Jul 2019 09:25:50 -0700
+
 fetch-system-config (0.1-0) bionic; urgency=medium
 
   * initial release of melodic packages
 
- -- Eric Relson <erelson@fetchrobotics.com> Fri, 01 Feb 2019 10:50:25 -0800
+ -- Eric Relson <erelson@fetchrobotics.com>  Fri, 01 Feb 2019 10:50:25 -0800
