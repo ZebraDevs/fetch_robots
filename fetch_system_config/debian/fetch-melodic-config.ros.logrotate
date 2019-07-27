@@ -41,13 +41,6 @@ compress
     delaycompress
 }
 
-/var/log/robot.log {
-    maxsize=50M
-    rotate 7
-    missingok
-    delaycompress
-}
-
 /var/log/ros/robot_log.csv {
     maxsize 100M
     weekly
