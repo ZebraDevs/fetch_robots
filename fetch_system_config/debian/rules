@@ -10,6 +10,7 @@ override_dh_systemd_enable:
 
 override_dh_installlogrotate:
 	dh_installlogrotate --name=ros
+	dh_installlogrotate --name=robot
 
 %:
 	dh $@ --with=systemd
