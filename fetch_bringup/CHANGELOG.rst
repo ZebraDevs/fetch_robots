@@ -2,6 +2,27 @@
 Changelog for package fetch_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Move ds4drv dep from package.xml to sys-config deb (`#48 <https://github.com/fetchrobotics/fetch_robots/issues/48>`_)
+  ROS buildfarm doesn't support pip dependencies.
+  Also removed outdated sixad line. We don't install sixad at all in 18.04.
+* Update launch files to support PS4 teleop w/ds4drv
+  - Teleop: Change default /joy/dev param to /dev/fetch_joy to match
+  udev rules
+  - Add ps4 flag/arg to default fetch.launch and freight.launch
+  - As workaround to a weird bug, renamed 'joy' node to 'joy_node'
+* remove respawn in fetch_bringup/launch/include/teleop.launch.xml (`#44 <https://github.com/fetchrobotics/fetch_robots/issues/44>`_)
+  We want to enable launching the teleop node and it's components separately, without duplicate nodes continually respawning.
+* Merge pull request `#37 <https://github.com/fetchrobotics/fetch_robots/issues/37>`_ from 708yamaguchi/melodic-devel
+  Add params for selecting teleop part for melodic
+* add joystick deadzone parameter (`#42 <https://github.com/fetchrobotics/fetch_robots/issues/42>`_)
+* Add argument to select launching teleop (`#40 <https://github.com/fetchrobotics/fetch_robots/issues/40>`_)
+  - add argument to select launching teleop for Fetch
+  - add argument to select launching teleop for freight
+* add params for selecting teleop part
+* Contributors: Andrew Parker, Carl Saldanha, Eric Relson, Naoya Yamaguchi, Shingo Kitagawa
+
 0.8.6 (2019-02-28)
 ------------------
 
