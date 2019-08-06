@@ -2,8 +2,8 @@
 Changelog for package fetch_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.8.7 (2019-08-06)
+------------------
 * Move ds4drv dep from package.xml to sys-config deb (`#48 <https://github.com/fetchrobotics/fetch_robots/issues/48>`_)
   ROS buildfarm doesn't support pip dependencies.
   Also removed outdated sixad line. We don't install sixad at all in 18.04.
