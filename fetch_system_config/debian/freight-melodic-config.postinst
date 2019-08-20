@@ -31,6 +31,8 @@ case "$1" in
         if [ ! -e "/var/log/ros" ]; then
             mkdir /var/log/ros
         fi
+        touch /var/log/ros/robot.log  # Otherwise systemd will make this file root:ros
+                                      #  with 755 instead of ros:ros with 775
         chown -R ros:ros /var/log/ros
         chmod 2775 /var/log/ros
 
