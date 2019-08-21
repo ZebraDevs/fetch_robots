@@ -2,6 +2,57 @@
 Changelog for package fetch_drivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Merge pull request `#1647 <https://github.com/fetchrobotics/fetch_drivers/issues/1647>`_ from moriarty/opensource-fixes
+  This addresses https://github.com/fetchrobotics/fetch_ros/issues/70
+* Docker based testing 2.0 (`#1332 <https://github.com/fetchrobotics/fetch_drivers/issues/1332>`_)
+* More LED Diagnostics [2018.8] (`#1510 <https://github.com/fetchrobotics/fetch_drivers/issues/1510>`_)
+* Merge pull request `#1504 <https://github.com/fetchrobotics/fetch_drivers/issues/1504>`_ from dbking77/publish_gyro_offset_age.8
+
+  * Extra gyro diagnostics 2018.8
+  * Publish gyro offset age.
+  * Record interval average for gyro offset.
+  * Publish average gyro temperature.
+
+* Merge pull request `#1398 <https://github.com/fetchrobotics/fetch_drivers/issues/1398>`_ from dbking77/slower_gyro_drift_fix-2018.8
+
+  * Put slightly more aggressive filter on wheel motion detector.
+  * Also don't keep gyro output enabled for a long time unless robot has been moving for a while.
+
+* Backport driver creation system [2018.8] (`#1369 <https://github.com/fetchrobotics/fetch_drivers/issues/1369>`_)
+* Merge pull request `#1364 <https://github.com/fetchrobotics/fetch_drivers/issues/1364>`_ from dbking77/combined_gyro_zeroing_fix_2018.8
+* Merge pull request `#1335 <https://github.com/fetchrobotics/fetch_drivers/issues/1335>`_ from dbking77/combined_gyro_output_disable_delay_2018.8
+* Merge pull request `#1306 <https://github.com/fetchrobotics/fetch_drivers/issues/1306>`_ from dbking77/charger_config_improvements_for_2018.8
+* Merge pull request `#1309 <https://github.com/fetchrobotics/fetch_drivers/issues/1309>`_ from dbking77/accel_direction_fixup_for_2018.8
+* added nav command sub to light driver (`#1314 <https://github.com/fetchrobotics/fetch_drivers/issues/1314>`_)
+* Support for mainboard rev I and J
+* Merge pull request `#1259 <https://github.com/fetchrobotics/fetch_drivers/issues/1259>`_ from dbking77/imu_param_description_fix
+* Merge branch '2018.6_stable' into master
+* Merge pull request `#1202 <https://github.com/fetchrobotics/fetch_drivers/issues/1202>`_ from moriarty/compatibility-fixes
+
+  * [ROS][C++] Indigo & Melodic Compatibility fixes
+  * [C++] urdf/model.h upstream compatibility ptr
+  * This fixes `#1181 <https://github.com/fetchrobotics/fetch_drivers/issues/1181>`_
+  * and can fix `fetchrobotics/fetch_ros#86 <https://github.com/fetchrobotics/fetch_ros/issues/86>`_
+  * [C++] additional [-Werror=catch-value=] fixes
+  * [C++] catch errors by const ref
+
+* More extensive docker stuff as well as a fix for testing master (`#1186 <https://github.com/fetchrobotics/fetch_drivers/issues/1186>`_)
+* Use std::isnan instead of isnan
+* Add missing catkin dependencies for actionlib messages
+* Move header files shared by driver and firmware to shared directory. (`#1167 <https://github.com/fetchrobotics/fetch_drivers/issues/1167>`_)
+
+  * Moving header files shared by driver and firmware to shared directory.
+  * Put shared structs/enums in fetch_drivers::shared namespace.
+  * Change include of stdint.h cstdint.
+  * Put BoardFlags, PanelFlags, and TorsoSensorParams in a struct.
+  * Update gitignore to ignore bootloader and firmware.
+
+* Merge pull request `#1187 <https://github.com/fetchrobotics/fetch_drivers/issues/1187>`_ from chadrockey/1604_fixes
+* Contributors: Alexander Moriarty, Andrew Parker, Carl Saldanha, Chad Rockey, Derek King, Eric Relson, Jeff Wilson, Justin Watson, Luc Bettaieb, Niharika Arora, Sarah Elliott
+
+
 0.8.7 (2019-08-06)
 ------------------
 
