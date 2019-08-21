@@ -2,8 +2,8 @@
 Changelog for package fetch_drivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.8.8 (2019-08-21)
+------------------
 * Binary Drivers 0.8.8 (`#52 <https://github.com/fetchrobotics/fetch_robots/issues/52>`_)
 
   * Sync drivers with internal release 2018.8_stable.
