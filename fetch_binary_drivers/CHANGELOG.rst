@@ -4,6 +4,11 @@ Changelog for package fetch_drivers
 
 Forthcoming
 -----------
+* Binary Drivers 0.8.8 (`#52 <https://github.com/fetchrobotics/fetch_robots/issues/52>`_)
+
+  * Sync drivers with internal release 2018.8_stable.
+  * This fixes https://github.com/fetchrobotics/fetch_ros/issues/70
+
 * Merge pull request `#1647 <https://github.com/fetchrobotics/fetch_drivers/issues/1647>`_ from moriarty/opensource-fixes
   This addresses https://github.com/fetchrobotics/fetch_ros/issues/70
 * Docker based testing 2.0 (`#1332 <https://github.com/fetchrobotics/fetch_drivers/issues/1332>`_)
