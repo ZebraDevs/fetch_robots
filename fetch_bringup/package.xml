@@ -29,5 +29,6 @@
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend>sensor_msgs</exec_depend>
   <exec_depend version_gte="0.0.4">sick_tim</exec_depend>
+  <exec_depend>sound_play</exec_depend>
 
 </package>
