@@ -1,0 +1,15 @@
+[Unit]
+Description=Job that launches the soundplay node once roscore has started
+After=roscore.service
+BindsTo=roscore.service
+
+[Install]
+WantedBy=roscore.service
+
+[Service]
+Environment="ROS_LOG_DIR=/var/log/ros"
+Restart=on-failure
+
+User=ros
+ExecStart=/bin/bash -c ". /opt/ros/melodic/setup.bash && rosrun sound_play soundplay_node.py"
+

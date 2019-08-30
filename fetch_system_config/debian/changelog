@@ -1,3 +1,9 @@
+fetch-system-config (0.2-0ubuntu2) trusty; urgency=medium
+
+  * Add soundplay node systemd service for Fetch and Freight
+
+ -- Eric Relson <erelson@sw18>  Thu, 29 Aug 2019 17:52:35 -0700
+
 fetch-system-config (0.2-0ubuntu1) bionic; urgency=medium
 
   * Add PS4 support via ds4drv (via pip installation)
