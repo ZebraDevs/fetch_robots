@@ -1,0 +1,9 @@
+<launch>
+
+  <!-- robot localization ukf -->
+  <node pkg="robot_localization" type="ukf_localization_node" name="ukf_se" clear_params="true">
+    <remap from="odometry/filtered" to="/odom_combined" />
+    <rosparam file="$(find fetch_bringup)/config/robot_localization.yaml" command="load" />
+  </node>
+
+</launch>

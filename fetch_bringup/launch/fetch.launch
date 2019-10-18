@@ -20,7 +20,9 @@
 
   <!-- Odometry -->
   <param name="base_controller/publish_tf" value="false" />
-  <include file="$(find fetch_bringup)/launch/include/graft.launch.xml" />
+  <!-- switch to use robot_localization -->
+  <!-- <include file="$(find fetch_bringup)/launch/include/graft.launch.xml" /> -->
+  <include file="$(find fetch_bringup)/launch/include/robot_localization.launch.xml" />
 
   <!-- URDF -->
   <param name="robot_description" textfile="$(find fetch_description)/robots/fetch.urdf" />

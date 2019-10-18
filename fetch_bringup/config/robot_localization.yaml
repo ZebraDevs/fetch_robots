@@ -1,0 +1,27 @@
+frequency: 50
+sensor_timeout: 1.0
+two_d_mode: true
+publish_tf: true
+publish_acceleration: false
+map_frame: map
+odom_frame: odom
+base_link_frame: base_link
+# odom
+odom0: /odom
+odom0_config: [true, true, false,
+               false, false, true,
+               true, true, false,
+               false, false, true,
+               false, false, false]
+odom0_nodelay: true
+odom0_differential: true
+# imu
+imu0: /imu
+imu0_config: [false, false, false,
+              false, false, false,
+              false, false, false,
+              false, false, true,
+              true, true, false]
+imu0_nodelay: true
+imu0_differential: true
+imu0_remove_gravitational_acceleration: true
