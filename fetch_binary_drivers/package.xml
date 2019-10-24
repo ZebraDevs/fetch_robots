@@ -11,7 +11,10 @@
   </description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
-  <maintainer email="amoriarty@fetchrobotics.com">Alexander Moriarty</maintainer>
+  <maintainer email="csaldanha@fetchrobotics.com">Carl Saldanha</maintainer>
+  <maintainer email="erelson@fetchrobotics.com">Eric Relson</maintainer>
+  <maintainer email="narora@fetchrobotics.com">Niharika Arora</maintainer>
+  <maintainer email="selliott@fetchrobotics.com">Sarah Elliott</maintainer>
   <maintainer email="opensource@fetchrobotics.com">Fetch Robotics Open Source Team</maintainer>
 
   <!-- One license tag required, multiple allowed, one license per tag -->
@@ -25,7 +28,7 @@
 
 
   <!-- Author tags are optional, multiple are allowed, one per tag -->
-  <author email="amoriarty@fetchrobotics.com">Alexander Moriarty</author>
+  <author>Alexander Moriarty</author>
 
 
   <buildtool_depend>catkin</buildtool_depend>
