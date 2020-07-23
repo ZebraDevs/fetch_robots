@@ -12,7 +12,7 @@ The latest tested fetch and freight system config debians are available from:
 However, for best results in upgrading, please follow
 http://docs.fetchrobotics.com/care_and_feeding.html#updating-your-robot
 
-# How to Manually Build
+# How the .debs are generated (but please use .debs above)
 
 ```bash
 git clone git@github.com:fetchrobotics/fetch_robots.git # -b melodic-devel
