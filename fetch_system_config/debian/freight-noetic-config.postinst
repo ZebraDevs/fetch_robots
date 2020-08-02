@@ -37,9 +37,9 @@ case "$1" in
         chmod 2775 /var/log/ros
 
         # Copy the robot.launch if not already existent
-        if [ ! -e "/etc/ros/melodic/robot.launch" ]; then
-            mkdir -p /etc/ros/melodic
-            cp /opt/ros/melodic/share/freight_bringup/launch/freight.launch /etc/ros/melodic/robot.launch
+        if [ ! -e "/etc/ros/noetic/robot.launch" ]; then
+            mkdir -p /etc/ros/noetic
+            cp /opt/ros/noetic/share/freight_bringup/launch/freight.launch /etc/ros/noetic/robot.launch
         fi
 
         # Workaround for gnome-settings-daemon not enabling immediate shutdown

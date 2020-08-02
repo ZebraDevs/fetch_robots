@@ -14,4 +14,4 @@ StandardError=file:/var/log/ros/robot.log
 
 User=ros
 ExecStartPre=+/usr/sbin/logrotate /etc/logrotate.d/robot -f
-ExecStart=/bin/bash -c ". /opt/ros/melodic/setup.bash && roslaunch /etc/ros/melodic/robot.launch --wait"
+ExecStart=/bin/bash -c ". /opt/ros/noetic/setup.bash && roslaunch /etc/ros/noetic/robot.launch --wait"

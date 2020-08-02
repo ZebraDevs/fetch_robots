@@ -7,30 +7,30 @@ Build-Depends: debhelper (>= 9.0.0),
 Standards-Version: 3.9.4
 Homepage: https://docs.fetchrobotics.com
 
-Package: fetch-melodic-config
+Package: fetch-noetic-config
 Architecture: any
 Depends: ${misc:Depends},
          adduser,
          chrony,
          openssh-server,
-         ros-melodic-fetch-bringup,
-         ros-melodic-ros
-Description: Configuration for Fetch on Melodic
-  This package will start ROS Melodic at bootup
+         ros-noetic-fetch-bringup,
+         ros-noetic-ros
+Description: Configuration for Fetch on Noetic
+  This package will start ROS Noetic at bootup
 Conflicts: fetch-system-config,
-           freight-melodic-config,
+           freight-noetic-config,
            freight-system-config
 
-Package: freight-melodic-config
+Package: freight-noetic-config
 Architecture: any
 Depends: ${misc:Depends},
          adduser,
          chrony,
          openssh-server,
-         ros-melodic-freight-bringup,
-         ros-melodic-ros
-Description: Configuration for Freight on Melodic
-  This package will start ROS Melodic at bootup
-Conflicts: fetch-melodic-config,
+         ros-noetic-freight-bringup,
+         ros-noetic-ros
+Description: Configuration for Freight on Noetic
+  This package will start ROS Noetic at bootup
+Conflicts: fetch-noetic-config,
            fetch-system-config,
            freight-system-config

@@ -12,5 +12,5 @@ Restart=on-failure
 ExecStartPre=/bin/bash /opt/ros/roscore_prestart.bash
 ExecStartPost=/bin/bash /opt/ros/roscore_poststart.bash
 User=ros
-ExecStart=/bin/bash -c ". /opt/ros/melodic/setup.bash && roscore"
+ExecStart=/bin/bash -c ". /opt/ros/noetic/setup.bash && roscore"
 

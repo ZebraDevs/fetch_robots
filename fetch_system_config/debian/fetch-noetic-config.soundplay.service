@@ -11,5 +11,5 @@ Environment="ROS_LOG_DIR=/var/log/ros"
 Restart=on-failure
 
 User=ros
-ExecStart=/bin/bash -c ". /opt/ros/melodic/setup.bash && rosrun sound_play soundplay_node.py"
+ExecStart=/bin/bash -c ". /opt/ros/noetic/setup.bash && rosrun sound_play soundplay_node.py"
 
