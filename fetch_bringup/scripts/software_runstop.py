@@ -272,7 +272,7 @@ class SoftwareRunstop(object):
             breaker = rospy.ServiceProxy(service_name, BreakerCommand)
             resp = breaker(enable)
             rospy.loginfo("Server sent response : \n" + str(resp))
-        except rospy.ServiceException, e:
+        except rospy.ServiceException as e:
             rospy.logerr("Service call failed: %s" % e)
             return False
         return True

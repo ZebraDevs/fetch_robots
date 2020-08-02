@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-# Copyright (c) 2015, Fetch Robotics Inc.
+# Copyright (c) 2015-2020, Fetch Robotics Inc.
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
@@ -30,7 +30,6 @@
 
 import rospy
 import actionlib
-from actionlib_msgs.msg import GoalStatus
 from control_msgs.msg import GripperCommandAction, GripperCommandGoal
 from sensor_msgs.msg import Joy
 from robot_controllers_msgs.msg import QueryControllerStatesAction, \
