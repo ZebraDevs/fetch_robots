@@ -5,11 +5,11 @@ project(fetch_drivers)
 #
 # This is the public version of fetch_drivers.
 # 
-# This is a binary only release of our dirvers and firmware.
+# This is a binary only release of our drivers and firmware.
 # The drivers and firmware have been compiled for our research robots, inside of Docker containers on our TeamCity build servers.
 #
-# The resulting output of that build job a tar.gz, where the build job should only copy in what is required for the research robots.
-# This public repository, just pulls in that tar.gz and extracts installs it into ROS/catkin paths.
+# The resulting output of that build job is a .tar.gz, where the build job should only copy in what is required for the research robots.
+# This public repository simply pulls in that .tar.gz and extracts/installs it into ROS/catkin paths.
 ##
 
 find_package(catkin REQUIRED
