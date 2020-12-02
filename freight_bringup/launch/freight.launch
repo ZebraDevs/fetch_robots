@@ -28,7 +28,7 @@
   <rosparam file="$(find freight_bringup)/config/default_controllers.yaml" command="load" />
 
   <!-- Joint State -> TF -->
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
   <!-- Laser -->
   <include file="$(find freight_bringup)/launch/include/laser.launch.xml" />

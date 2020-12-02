@@ -43,7 +43,7 @@
   <rosparam file="$(find fetch_bringup)/config/default_controllers.yaml" command="load" />
 
   <!-- Joint State -> TF -->
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
   <!-- Head Camera -->
   <include file="$(find fetch_bringup)/launch/include/head_camera.launch.xml" >
