@@ -40,7 +40,7 @@
   <!-- system dependencies which the drivers dyanmically link against -->
   <depend>boost</depend>
   <depend>curl</depend>
-  <depend>python</depend>
+  <depend>python3</depend>
   <depend>yaml-cpp</depend>
 
   <!-- ros msgs which the drivers depend on -->

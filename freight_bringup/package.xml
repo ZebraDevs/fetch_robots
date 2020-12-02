@@ -21,7 +21,6 @@
   <exec_depend>fetch_teleop</exec_depend>
   <exec_depend>graft</exec_depend>
   <exec_depend>joy</exec_depend>
-  <exec_depend>ps3joy</exec_depend>
   <exec_depend>robot_state_publisher</exec_depend>
   <exec_depend version_gte="0.0.4">sick_tim</exec_depend>
   <exec_depend>sound_play</exec_depend>

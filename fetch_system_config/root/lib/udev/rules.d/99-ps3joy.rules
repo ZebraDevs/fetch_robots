@@ -1,2 +1,0 @@
-KERNEL=="js?", SUBSYSTEM=="input", ATTRS{name}=="Sony Playstation SixAxis/DS3", SYMLINK+="ps3joy"
-KERNEL=="js?", SUBSYSTEM=="input", ATTRS{name}=="Sony Playstation SixAxis/DS3", SYMLINK+="fetch_joy"
