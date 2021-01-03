@@ -22,6 +22,7 @@
     <param name="has_torso" value="false" />
     <param name="has_head" value="false" />
     <param name="has_arm" value="false" />
+    <param name="parampath" value="$(find freight_bringup)/config/freight_driver_params.json"/>
   </node>
 
   <!-- Controllers -->

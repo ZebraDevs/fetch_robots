@@ -2,6 +2,7 @@
 
   <arg name="joy_device" default="/dev/fetch_joy"/>
   <arg name="ps4" default="false"/>
+  <arg name="is_fetch" default="false"/>
 
   <node name="joy_node" pkg="joy" type="joy_node">
     <param name="autorepeat_rate" value="1"/>
@@ -17,6 +18,7 @@
   </node>
 
   <node name="teleop" pkg="fetch_teleop" type="joystick_teleop">
+    <param name="is_fetch" value="true" />
     <param name="use_torso" value="true" />
     <param name="use_gripper" value="true" />
     <param name="use_head" value="true" />
