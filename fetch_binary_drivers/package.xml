@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package format="2">
   <name>fetch_drivers</name>
-  <version>0.8.8</version>
+  <version>0.9.0</version>
   <description>
     The public fetch_drivers package is a binary only release.
 
@@ -13,7 +13,6 @@
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <maintainer email="csaldanha@fetchrobotics.com">Carl Saldanha</maintainer>
   <maintainer email="erelson@fetchrobotics.com">Eric Relson</maintainer>
-  <maintainer email="narora@fetchrobotics.com">Niharika Arora</maintainer>
   <maintainer email="selliott@fetchrobotics.com">Sarah Elliott</maintainer>
   <maintainer email="opensource@fetchrobotics.com">Fetch Robotics Open Source Team</maintainer>
 
