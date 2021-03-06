@@ -2,6 +2,22 @@
 Changelog for package freight_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Changes for Noetic/Py3 (`#61 <https://github.com/fetchrobotics/fetch_robots/issues/61>`_)
+
+  * Remove some ps3 controller references (no longer supported)
+  * Update state_publisher -> robot_state_publisher
+  * Changes for compatibility with new drivers:
+    Drivers primarily load some params from a json file which
+    end-users shouldn't need to modify. This file will live in
+    /opt/ros/noetic or the catkin workspace for 99% of usecases.
+  * Add explicit setting for fetch teleop param.
+
+* Add soundplay ROS node as systemd service (`#53 <https://github.com/fetchrobotics/fetch_robots/issues/53>`_)
+  Functionality existed in 14.04/indigo, and was initially left out.
+* Contributors: Eric Relson
+
 0.8.8 (2019-08-21)
 ------------------
 
