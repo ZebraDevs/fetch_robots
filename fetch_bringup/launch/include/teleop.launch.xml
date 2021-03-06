@@ -17,6 +17,7 @@
   </node>
 
   <node name="teleop" pkg="fetch_teleop" type="joystick_teleop">
+    <param name="is_fetch" value="true" />
     <param name="use_torso" value="true" />
     <param name="use_gripper" value="true" />
     <param name="use_head" value="true" />
@@ -30,6 +31,7 @@
 
   <node name="controller_reset" pkg="fetch_bringup" type="controller_reset.py" />
 
-  <node name="tuck_arm" pkg="fetch_teleop" type="tuck_arm.py" args="--joystick" />
+  <!-- arm tuck shuts down purposely on success, relies on roslaunch respawn -->
+  <node name="tuck_arm" pkg="fetch_teleop" type="tuck_arm.py" args="--joystick" respawn="true" />
 
 </launch>

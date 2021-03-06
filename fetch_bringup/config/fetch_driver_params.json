@@ -1,0 +1,15 @@
+{
+    "calibration_date": "uncalibrated",
+    "charger_extra_table_age": 0.5,
+    "csv_logger": {
+        "csv_logger_period": 10.0,
+        "log_filename": "/var/log/ros/robot_log.csv"
+    },
+    "default_logger_level": 2,
+    "has_fetch_arm": true,
+    "mainboard_ip": "10.42.42.42",
+    "max_acceptable_table_age": 0.96,
+    "port": 2067,
+    "ros_spinner_threads": 1,
+    "watchdog_period": 0.1
+}

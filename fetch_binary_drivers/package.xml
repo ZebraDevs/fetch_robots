@@ -13,7 +13,6 @@
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
   <maintainer email="csaldanha@fetchrobotics.com">Carl Saldanha</maintainer>
   <maintainer email="erelson@fetchrobotics.com">Eric Relson</maintainer>
-  <maintainer email="narora@fetchrobotics.com">Niharika Arora</maintainer>
   <maintainer email="selliott@fetchrobotics.com">Sarah Elliott</maintainer>
   <maintainer email="opensource@fetchrobotics.com">Fetch Robotics Open Source Team</maintainer>
 
@@ -40,7 +39,7 @@
   <!-- system dependencies which the drivers dyanmically link against -->
   <depend>boost</depend>
   <depend>curl</depend>
-  <depend>python</depend>
+  <depend>python3</depend>
   <depend>yaml-cpp</depend>
 
   <!-- ros msgs which the drivers depend on -->

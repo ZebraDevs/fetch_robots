@@ -32,6 +32,7 @@
     <param name="has_torso" value="true" />
     <param name="has_head" value="true" />
     <param name="has_arm" value="true" />
+    <param name="parampath" value="$(find fetch_bringup)/config/fetch_driver_params.json"/>
   </node>
 
   <!-- Drivers for Gripper -->
@@ -43,7 +44,7 @@
   <rosparam file="$(find fetch_bringup)/config/default_controllers.yaml" command="load" />
 
   <!-- Joint State -> TF -->
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
   <!-- Head Camera -->
   <include file="$(find fetch_bringup)/launch/include/head_camera.launch.xml" >

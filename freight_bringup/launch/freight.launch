@@ -22,13 +22,14 @@
     <param name="has_torso" value="false" />
     <param name="has_head" value="false" />
     <param name="has_arm" value="false" />
+    <param name="parampath" value="$(find freight_bringup)/config/freight_driver_params.json"/>
   </node>
 
   <!-- Controllers -->
   <rosparam file="$(find freight_bringup)/config/default_controllers.yaml" command="load" />
 
   <!-- Joint State -> TF -->
-  <node name="robot_state_publisher" pkg="robot_state_publisher" type="state_publisher" />
+  <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 
   <!-- Laser -->
   <include file="$(find freight_bringup)/launch/include/laser.launch.xml" />
