@@ -2,6 +2,23 @@
 Changelog for package fetch_drivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Initial Noetic release
+* Changes for Noetic/Py3 (`#61 <https://github.com/fetchrobotics/fetch_robots/issues/61>`_)
+
+  * Remove some ps3 controller references (no longer supported)
+  * Update state_publisher -> robot_state_publisher
+  * Changes for compatibility with new drivers:
+    Drivers primarily load some params from a json file which
+    end-users shouldn't need to modify. This file will live in
+    /opt/ros/noetic or the catkin workspace for 99% of usecases.
+  * Add explicit setting for fetch teleop param.
+  * Point to a new drivers binary release (0.9.0)
+  * Respawn tuck_arm node on shutdown [OPEN-48]
+
+* Contributors: Alex Moriarty, Eric Relson, Russell Toris
+
 0.8.8 (2019-08-21)
 ------------------
 * Binary Drivers 0.8.8 (`#52 <https://github.com/fetchrobotics/fetch_robots/issues/52>`_)
