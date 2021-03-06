@@ -2,8 +2,8 @@
 Changelog for package fetch_drivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.0 (2021-03-05)
+------------------
 * Initial Noetic release
 * Changes for Noetic/Py3 (`#61 <https://github.com/fetchrobotics/fetch_robots/issues/61>`_)
 
