@@ -9,6 +9,10 @@ build
 *.log
 *.dsc
 *.changes
+debian
 fetch-melodic-config
 freight-melodic-config
+fetch-system-config_*
+fetch-melodic-config_*
+freight-melodic-config_*
 files

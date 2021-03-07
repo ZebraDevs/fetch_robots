@@ -2,6 +2,13 @@
 Changelog for package freight_bringup
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Initial Noetic release
+* Add soundplay ROS node as systemd service (`#53 <https://github.com/fetchrobotics/fetch_robots/issues/53>`_)
+* Updates maintainers
+* Contributors: Eric Relson
+
 0.8.8 (2019-08-21)
 ------------------
 
