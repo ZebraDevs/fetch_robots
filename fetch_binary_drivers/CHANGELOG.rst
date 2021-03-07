@@ -2,8 +2,8 @@
 Changelog for package fetch_drivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.8.9 (2021-03-06)
+------------------
 * Initial Noetic release
 * Updates maintainers
 * Contributors: Alex Moriarty, Russell Toris
