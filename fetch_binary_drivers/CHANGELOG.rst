@@ -2,8 +2,8 @@
 Changelog for package fetch_drivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.2 (2021-03-12)
+------------------
 * Update md5sum file
 * Contributors: Eric Relson
 
