@@ -1,23 +1,22 @@
 # Fetch System Config
 
-This is the Git Build Package (GBP) repo for Research versions of Fetch/Freight.
-All other tools (iso installer, documentation, etc), and the commercial version
-of this package, are on the 'master' branch.
+This is the Git Build Package (GBP) folder the OS-level config package
+for research versions of Fetch/Freight.
 
 The latest tested fetch and freight system config debians are available from:
 
-- http://packages.fetchrobotics/binaries/fetch-melodic-config.deb
-- http://packages.fetchrobotics/binaries/freight-melodic-config.deb
+- http://packages.fetchrobotics/binaries/fetch-noetic-config.deb
+- http://packages.fetchrobotics/binaries/freight-noetic-config.deb
 
 However, for best results in upgrading, please follow
 http://docs.fetchrobotics.com/care_and_feeding.html#updating-your-robot
 
-# How the .debs are generated (but please use .debs above)
+# How the .debs are generated (but please use the .debs above)
 
 ```bash
-git clone git@github.com:fetchrobotics/fetch_robots.git # -b melodic-devel
+git clone git@github.com:fetchrobotics/fetch_robots.git -b ros1
 cd fetch_robots/fetch_system_config
-# If prepparing for a new release, update changelog
+# If preparing for a new release, update changelog
 dch
 # Bump version
 dch --release
