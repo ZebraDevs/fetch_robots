@@ -60,7 +60,7 @@ case "$1" in
         fi
 
         # For PS4 controller support, install ds4drv with pip, presuming that pip is installed already
-        pip install ds4drv
+        /usr/local/bin/pip install ds4drv
 
         ### Set up ethernet to ensure static network for internal robot communications.
         # Reboot required for changes to take effect.
