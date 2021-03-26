@@ -1,10 +1,10 @@
 Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 
 Files: *
-Copyright: 2015-2018 Fetch Robotics Inc <info@fetchrobotics.com>
+Copyright: 2015-2021 Fetch Robotics Inc <info@fetchrobotics.com>
            2013 I Heart Engineering <code@iheartengineering.com>
 License: BSD-3-clause
- Copyright (c) 2015-2018, Fetch Robotics Inc.
+ Copyright (c) 2015-2021, Fetch Robotics Inc.
  Copyright (c) 2013, I Heart Engineering
  All rights reserved.
  .

@@ -9,8 +9,8 @@ WantedBy=multi-user.target
 Environment="ROS_LOG_DIR=/var/log/ros"
 Restart=on-failure
 
-ExecStartPre=/bin/bash /opt/ros/roscore_prestart.bash
-ExecStartPost=/bin/bash /opt/ros/roscore_poststart.bash
+ExecStartPre=/usr/bin/bash /opt/ros/roscore_prestart.bash
+ExecStartPost=/usr/bin/bash /opt/ros/roscore_poststart.bash
 User=ros
-ExecStart=/bin/bash -c ". /opt/ros/noetic/setup.bash && roscore"
+ExecStart=/usr/bin/bash -c ". /opt/ros/noetic/setup.bash && roscore"
 

@@ -1,8 +1,15 @@
+fetch-system-config (0.3-0ubuntu1) focal; urgency=medium
+
+  * Tweaks for Ubuntu 20.04 and ROS Noetic
+  * Removes PS3 controller support
+
+ -- Eric Relson <erelson@fetchrobotics.com>  Wed, 24 Mar 2021 21:07:09 -0700
+
 fetch-system-config (0.2-0ubuntu2) trusty; urgency=medium
 
   * Add soundplay node systemd service for Fetch and Freight
 
- -- Eric Relson <erelson@sw18>  Thu, 29 Aug 2019 17:52:35 -0700
+ -- Eric Relson <erelson@fetchrobotics.com>  Thu, 29 Aug 2019 17:52:35 -0700
 
 fetch-system-config (0.2-0ubuntu1) bionic; urgency=medium
 
