@@ -8,5 +8,5 @@ WantedBy=bluetooth.target
 
 [Service]
 Restart=on-abort
-ExecStart=/bin/bash -c "ds4drv --hidraw"
+ExecStart=/usr/bin/bash -c "ds4drv --hidraw"
 
