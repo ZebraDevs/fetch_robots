@@ -9,9 +9,8 @@ WantedBy=roscore.service
 [Service]
 Environment="ROS_LOG_DIR=/var/log/ros"
 Restart=on-failure
-StandardOutput=file:/var/log/ros/robot.log
-StandardError=file:/var/log/ros/robot.log
+StandardOutput=append:/var/log/ros/robot.log
+StandardError=append:/var/log/ros/robot.log
 
 User=ros
-ExecStartPre=+/usr/sbin/logrotate /etc/logrotate.d/robot -f
 ExecStart=/usr/bin/bash -c ". /opt/ros/noetic/setup.bash && roslaunch /etc/ros/noetic/robot.launch --wait"
