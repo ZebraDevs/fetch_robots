@@ -20,6 +20,8 @@ cd fetch_robots/fetch_system_config
 dch
 # Bump version
 dch --release
+# Commit changelog
+# Build the debian (which we upload to packages.fetchrobotics.com, per above)
 dpkg-buildpackage -us -uc
 # Debians are placed in the parent directory
 cd ..

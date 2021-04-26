@@ -1,3 +1,10 @@
+fetch-system-config (0.3-0ubuntu2) focal; urgency=medium
+
+  * Set PS4 service enabled by default; remove ps3joy service
+  * Cleanup systemd logging approach thanks to newer systemd version in 20.04
+
+ -- Eric Relson <erelson@fetchrobotics.com>  Sun, 25 Apr 2021 21:40:20 -0700
+
 fetch-system-config (0.3-0ubuntu1) focal; urgency=medium
 
   * Tweaks for Ubuntu 20.04 and ROS Noetic
