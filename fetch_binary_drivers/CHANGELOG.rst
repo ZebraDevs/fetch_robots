@@ -2,8 +2,8 @@
 Changelog for package fetch_drivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+0.9.3 (2021-04-25)
+------------------
 * New bump to binary drivers (0.9.3)
 
   * Fix: Loosen tolerance for torso startup position
