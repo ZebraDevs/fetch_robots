@@ -2,6 +2,15 @@
 Changelog for package fetch_drivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* New bump to binary drivers (0.9.3)
+
+  * Fix: Loosen tolerance for torso startup position
+  * Fix: Longer signal from mainboard to computer for shutdown
+
+* Contributors: Eric Relson
+
 0.9.2 (2021-03-12)
 ------------------
 * Update md5sum file
