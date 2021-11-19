@@ -1,3 +1,10 @@
+fetch-system-config (0.3-0ubuntu3) focal; urgency=medium
+
+  * Fix freight-noetic-config postinstall bug
+  * Quieter postinstall script output
+
+ -- Eric Relson <erelson@FR-1657>  Fri, 19 Nov 2021 11:11:01 -0800
+
 fetch-system-config (0.3-0ubuntu2) focal; urgency=medium
 
   * Set PS4 service enabled by default; remove ps3joy service
