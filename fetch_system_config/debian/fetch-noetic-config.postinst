@@ -101,7 +101,7 @@ case "$1" in
         # With 18.04+, we have a grub config to not use new-style network-device naming. With 20.04 we
         # need to remove the interface specifications in the wifi network connection info.  Otherwise,
         # after reboot, when the wifi device has a different name, the computer will fail to get online.
-        if ls /etc/NetworkManager/system-connections/*; then
+        if ls /etc/NetworkManager/system-connections/* &> /dev/null; then
             sed -i '/^interface-name/d' /etc/NetworkManager/system-connections/*
         fi
 
