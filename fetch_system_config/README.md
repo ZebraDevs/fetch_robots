@@ -30,6 +30,7 @@ ls *system*.deb
 
 # TODO: catkin/standardize
 
-This isn't a GBP anymore, it will be published to:
+In the future we might opt to not have this package downloaded from
+packages.fetchrobotics.com and instead have it published to:
 
 https://github.com/fetchrobotics-gbp/fetch_robots-release
