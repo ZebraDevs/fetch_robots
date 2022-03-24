@@ -5,8 +5,8 @@ for research versions of Fetch/Freight.
 
 The latest tested fetch and freight system config debians are available from:
 
-- http://packages.fetchrobotics/binaries/fetch-noetic-config.deb
-- http://packages.fetchrobotics/binaries/freight-noetic-config.deb
+- http://packages.fetchrobotics.com/binaries/fetch-noetic-config.deb
+- http://packages.fetchrobotics.com/binaries/freight-noetic-config.deb
 
 However, for best results in upgrading, please follow
 http://docs.fetchrobotics.com/care_and_feeding.html#updating-your-robot
