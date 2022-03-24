@@ -6,8 +6,8 @@ of this package, are on the 'master' branch.
 
 The latest tested fetch and freight system config debians are available from:
 
-- http://packages.fetchrobotics/binaries/fetch-melodic-config.deb
-- http://packages.fetchrobotics/binaries/freight-melodic-config.deb
+- http://packages.fetchrobotics.com/binaries/fetch-melodic-config.deb
+- http://packages.fetchrobotics.com/binaries/freight-melodic-config.deb
 
 However, for best results in upgrading, please follow
 http://docs.fetchrobotics.com/care_and_feeding.html#updating-your-robot
