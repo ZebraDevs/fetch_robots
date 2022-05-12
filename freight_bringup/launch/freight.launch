@@ -3,6 +3,7 @@
   <param name="robot/type" value="freight" />
   <param name="robot/name" textfile="/etc/hostname" />
   <arg name="launch_teleop" default="true" />
+  <arg name="launch_diagnostics_agg" default="true" />
 
   <!-- Calibration -->
   <param name="calibration_date" value="uncalibrated"/>
@@ -43,6 +44,7 @@
   <include file="$(find fetch_open_auto_dock)/launch/auto_dock.launch" />
 
   <!-- Diagnostics Aggregator -->
-  <include file="$(find freight_bringup)/launch/include/aggregator.launch.xml" />
+  <include if="$(arg launch_diagnostics_agg)"
+           file="$(find freight_bringup)/launch/include/aggregator.launch.xml" />
 
 </launch>
